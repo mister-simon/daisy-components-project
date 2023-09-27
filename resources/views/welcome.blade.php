@@ -17,7 +17,6 @@
 
             @include('alerts')
             @include('buttons')
-
         </div>
     </div>
 </body>
