@@ -8,6 +8,7 @@
     <title>Testing</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -15,8 +16,13 @@
         <div class="prose max-w-none">
             <h1>Kitchen Sink</h1>
 
-            @include('alerts')
-            @include('buttons')
+            {{-- Actions --}}
+            {{-- @include('buttons') --}}
+            @include('dropdowns')
+
+            {{-- Data display --}}
+            {{-- @include('accordions') --}}
+            {{-- @include('alerts') --}}
         </div>
     </div>
 </body>
