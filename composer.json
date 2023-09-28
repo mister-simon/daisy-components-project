@@ -68,7 +68,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/home/simon/work/other/daisy-components"
+            "url": "../daisy-components"
         }
     ],
     "minimum-stability": "stable",
