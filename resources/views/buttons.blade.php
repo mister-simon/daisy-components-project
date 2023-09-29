@@ -69,7 +69,9 @@
 
     <h3>Glass</h3>
 
-    <x-button glass>Glass</x-button>
+    <div class="inline-block bg-accent px-10 py-4">
+        <x-button glass>This button has a glass effect</x-button>
+    </div>
 
     <h3>Square</h3>
 
