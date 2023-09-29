@@ -18,7 +18,8 @@
 
             {{-- Actions --}}
             {{-- @include('buttons') --}}
-            @include('dropdowns')
+            {{-- @include('dropdowns') --}}
+            @include('modals')
 
             {{-- Data display --}}
             {{-- @include('accordions') --}}
