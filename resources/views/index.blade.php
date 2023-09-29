@@ -17,13 +17,13 @@
             <h1>Kitchen Sink</h1>
 
             {{-- Actions --}}
-            {{-- @include('buttons') --}}
-            {{-- @include('dropdowns') --}}
+            @include('buttons')
+            @include('dropdowns')
             @include('modals')
 
             {{-- Data display --}}
-            {{-- @include('accordions') --}}
-            {{-- @include('alerts') --}}
+            @include('accordions')
+            @include('alerts')
         </div>
     </div>
 </body>
