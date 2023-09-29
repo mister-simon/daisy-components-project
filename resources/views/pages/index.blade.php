@@ -17,15 +17,19 @@
             <h1>Kitchen Sink</h1>
 
             {{-- Actions --}}
-            @include('buttons')
-            @include('dropdowns')
-            @include('modals')
+            @include('sections.buttons')
+            @include('sections.dropdowns')
+            @include('sections.modals')
 
             {{-- Data display --}}
-            @include('accordions')
-            @include('alerts')
+            @include('sections.accordions')
+            @include('sections.alerts')
         </div>
     </div>
+
+    <hr>
+
+    <x-footer />
 </body>
 
 </html>
