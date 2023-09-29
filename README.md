@@ -22,9 +22,9 @@ Eventually I intend to make that package available via composer... But for now i
 
 ## Where to look next?
 
-To get started - Check out `resources/views/index.blade.php`.
+To get started - Check out `resources/views/pages/index.blade.php`.
 
-This page contains includes for each component covered by the package. E.g. `resources/views/buttons.blade.php` contains a bunch of example buttons.
+This page contains includes for each component covered by the package. E.g. `resources/views/sections/buttons.blade.php` contains a bunch of example buttons.
 
 You'll notice that the components are unprefixed, like `<x-button>`, that's due to the config file `config/daisy-components.php`, which sets the prefix to `null`.
 
