@@ -19,7 +19,7 @@
     <p>The above alerts will auto-dismiss.</p>
 </div>
 
-<h2>Auto-dismiss Alerts (dismiss after visible, requires Intersect)</h2>
+<h2>Auto-dismiss Alerts (dismiss after visible, requires <a href="https://alpinejs.dev/plugins/intersect" target="_blank" rel="noopener noreferrer">Alpine Intersect</a>)</h2>
 
 <div class="flex h-36 flex-col gap-20 overflow-auto bg-neutral p-8 text-neutral-content">
     <p>Scroll down to reveal alerts. Each will dismiss after a set time</p>
