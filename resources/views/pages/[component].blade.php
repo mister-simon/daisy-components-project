@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-screen">
 
 <head>
     <meta charset="utf-8">
@@ -13,14 +13,20 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body>
+<body class="flex min-h-screen flex-col">
+    <nav>
+        <x-nav />
+    </nav>
+
     <div class="container mx-auto">
         <div class="prose max-w-none">
             @includeFirst(["sections.{$component}", 'component-not-found'])
         </div>
     </div>
 
-    <x-footer />
+    <footer class="mt-auto">
+        <x-nav />
+    </footer>
 </body>
 
 </html>
