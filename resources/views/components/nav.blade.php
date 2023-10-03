@@ -6,8 +6,22 @@
 @endphp
 
 <ul class="mt-auto flex items-center justify-center gap-4 p-8">
-    <li><x-button accent tag="a" href="/">Home</x-button></li>
+    <li>
+        <x-button
+            tag="a"
+            href="/">
+            Home
+        </x-button>
+    </li>
+    <x-nav-divider />
     @foreach ($sections as $section)
-        <li><x-button tag="a" :href="'/' . $section">{{ $section }}</x-button></li>
+        <li>
+            <x-button
+                tag="a"
+                :href="'/' . $section"
+                :active="request()->is($section)">
+                {{ $section }}
+            </x-button>
+        </li>
     @endforeach
 </ul>
