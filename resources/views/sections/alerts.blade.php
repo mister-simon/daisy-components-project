@@ -8,6 +8,17 @@
     <x-alert error>Something went wrong</x-alert>
 </div>
 
+<h2>Alerts with custom icon</h2>
+
+<div class="space-y-2">
+    <x-alert>
+        <x-slot:icon>
+            <span class="inline-flex h-6 w-6 items-center justify-center leading-4">💥</span>
+        </x-slot:icon>
+        Kapow! The examples above have 1.5rem square svgs, but the icons could be anything really.
+    </x-alert>
+</div>
+
 <h2>Auto-dismiss Alerts</h2>
 
 <div class="flex h-36 flex-col gap-20 overflow-auto bg-neutral p-8 text-neutral-content">
@@ -16,7 +27,7 @@
     <x-alert success auto-dismiss="6000">I will disappear in 6 seconds</x-alert>
     <x-alert warning auto-dismiss="7000">I will disappear in 7 seconds</x-alert>
     <x-alert error auto-dismiss="8000">I will disappear in 8 seconds</x-alert>
-    <p>The above alerts will auto-dismiss.</p>
+    <p>The above alerts will auto-dismiss. They might have already gone.</p>
 </div>
 
 <h2>Auto-dismiss Alerts (dismiss after visible, requires <a href="https://alpinejs.dev/plugins/intersect" target="_blank" rel="noopener noreferrer">Alpine Intersect</a>)</h2>
