@@ -32,3 +32,15 @@
         </x-slot:mask>
     </x-avatar>
 </div>
+
+<h3>Avatar with Placeholder</h3>
+
+<div class="not-prose">
+    <x-avatar>
+        <x-slot:mask class="w-12 rounded-full bg-neutral-focus text-xl text-neutral-content">
+            SW
+        </x-slot:mask>
+    </x-avatar>
+</div>
+
+<p class="text-sm">Note the width is being applied to the mask slot in this case</p>
