@@ -38,7 +38,7 @@
     <div>
         <p class="text-sm">Indeterminate state (only set via js...)</p>
         <x-swap x-init="$el.querySelector('input').indeterminate = true">
-            <x-slot:indeterminate class="btn btn-ghost">indeterminate</x-slot:indeterminate>
+            <x-slot:indeterminate class="btn btn-neutral btn-outline">Indeterminate</x-slot:indeterminate>
             <x-slot:off class="btn btn-neutral">Off</x-slot:off>
             <x-slot:on class="btn btn-primary">On</x-slot:on>
         </x-swap>
