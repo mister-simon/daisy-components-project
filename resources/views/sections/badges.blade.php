@@ -52,4 +52,66 @@
     </x-button>
 </div>
 
-<h3>Badges in text <x-badge lg outline>Wow</x-badge></h3>
+<h3 class="flex items-center gap-2">Badges in text <x-badge lg outline>Wow</x-badge></h3>
+
+<h3>Badge tags</h3>
+
+<div>
+    <x-badge tag="marquee" class="motion-reduce:hidden">Don't use marquee</x-badge>
+    <x-badge tag="div" class="motion-safe:hidden">I'm a div</x-badge>
+</div>
+
+<h3>Empty badges</h3>
+
+<div class="not-prose grid w-min grid-flow-col-dense grid-rows-4 place-items-center gap-2">
+    <x-badge lg />
+    <x-badge />
+    <x-badge sm />
+    <x-badge xs />
+
+    <x-badge lg neutral />
+    <x-badge neutral />
+    <x-badge sm neutral />
+    <x-badge xs neutral />
+
+    <x-badge lg primary />
+    <x-badge primary />
+    <x-badge sm primary />
+    <x-badge xs primary />
+
+    <x-badge lg secondary />
+    <x-badge secondary />
+    <x-badge sm secondary />
+    <x-badge xs secondary />
+
+    <x-badge lg accent />
+    <x-badge accent />
+    <x-badge sm accent />
+    <x-badge xs accent />
+
+    <x-badge lg ghost />
+    <x-badge ghost />
+    <x-badge sm ghost />
+    <x-badge xs ghost />
+
+    <x-badge lg info />
+    <x-badge info />
+    <x-badge sm info />
+    <x-badge xs info />
+
+    <x-badge lg success />
+    <x-badge success />
+    <x-badge sm success />
+    <x-badge xs success />
+
+    <x-badge lg warning />
+    <x-badge warning />
+    <x-badge sm warning />
+    <x-badge xs warning />
+
+    <x-badge lg error />
+    <x-badge error />
+    <x-badge sm error />
+    <x-badge xs error />
+
+</div>
