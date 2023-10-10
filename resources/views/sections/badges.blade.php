@@ -46,10 +46,10 @@
         <x-badge neutral>+99</x-badge>
     </x-button>
 
-    <x-button class="relative">
-        Notifications
-        <x-badge neutral class="absolute right-0 top-0 -translate-y-1/2 translate-x-1/3 animate-pulse">New</x-badge>
-    </x-button>
+    <div class="indicator">
+        <x-badge neutral class="indicator-item animate-pulse">New</x-badge>
+        <x-button>Notifications</x-button>
+    </div>
 </div>
 
 <h2 class="flex items-center gap-2">Badges in text <x-badge lg outline>Wow</x-badge></h2>
