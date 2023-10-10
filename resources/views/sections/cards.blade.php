@@ -20,14 +20,20 @@
 
 <h2>More examples</h2>
 
-<div class="not-prose flex flex-wrap gap-x-4 gap-y-14">
+<div class="not-prose flex flex-wrap items-start gap-x-4 gap-y-14">
     <x-card bordered class="shadow-xl">
-        <x-slot:img src="https://placehold.co/400x50" alt="400px by 50px placeholder" class="h-12 w-full object-cover"></x-slot:img>
-        <x-slot:img-end src="https://placehold.co/400x50" alt="400px by 50px placeholder" class="h-12 w-full object-cover"></x-slot:img-end>
+        <x-slot:img
+            src="https://placehold.co/400x50"
+            alt="400px by 50px placeholder"
+            class="h-12 w-full object-cover"></x-slot:img>
+        <x-slot:img-end
+            src="https://placehold.co/400x50"
+            alt="400px by 50px placeholder"
+            class="h-12 w-full object-cover"></x-slot:img-end>
 
         <x-slot:title>Complete card</x-slot:title>
 
-        <div class="mb-auto space-y-1">
+        <div class="mb-auto max-w-sm space-y-1">
             <p>Start image, title, content, actions, and end image.</p>
             <p>The border and shadow are also applied here.</p>
             <p>Actions can be repositioned by styling the actions slot.</p>
@@ -40,12 +46,18 @@
     </x-card>
 
     <x-card compact bordered class="shadow-xl">
-        <x-slot:img src="https://placehold.co/400x50" alt="400px by 50px placeholder" class="h-12 w-full object-cover"></x-slot:img>
-        <x-slot:img-end src="https://placehold.co/400x50" alt="400px by 50px placeholder" class="h-12 w-full object-cover"></x-slot:img-end>
+        <x-slot:img
+            src="https://placehold.co/400x50"
+            alt="400px by 50px placeholder"
+            class="h-12 w-full object-cover"></x-slot:img>
+        <x-slot:img-end
+            src="https://placehold.co/400x50"
+            alt="400px by 50px placeholder"
+            class="h-12 w-full object-cover"></x-slot:img-end>
 
         <x-slot:title>Compact card</x-slot:title>
 
-        <div class="mb-auto space-y-1">
+        <div class="mb-auto max-w-sm space-y-1">
             <p>This card is similar to the previous one.</p>
             <p>Use the compact component attribute for smaller body text, padding, etc.</p>
         </div>
@@ -55,20 +67,104 @@
         </x-slot:actions>
     </x-card>
 
+    <x-card compact bordered class="shadow-xl">
+        <x-slot:title tag="span">This element is a span</x-slot:title>
+
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>But it could just as easily have been a <code>{{ '<h1>' }}</code>.</p>
+            <p>Use custom title tags to properly structure your pages headings.</p>
+        </div>
+    </x-card>
+
     <x-card bordered class="shadow-xl" body-classes="items-center justify-center">
         <x-slot:title>Center everything!</x-slot:title>
-        <p>You may pass body classes, which will be applied to the card body.</p>
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>You may pass <code>body-classes</code>, which will be applied to the card body.</p>
+        </div>
         <x-slot:actions>
             <x-button neutral>Central Action</x-button>
         </x-slot:actions>
     </x-card>
 
-    <x-card compact bordered class="shadow-xl">
-        <x-slot:title tag="span">This element is a span</x-slot:title>
+    <x-card bordered class="shadow-xl" img-classes="p-10 pb-0" img-end-classes="p-10 pt-0">
+        <x-slot:img
+            src="https://placehold.co/400x50"
+            alt="400px by 50px placeholder"
+            class="h-12 w-full rounded-xl object-cover"></x-slot:img>
+        <x-slot:img-end
+            src="https://placehold.co/400x50"
+            alt="400px by 50px placeholder"
+            class="h-12 w-full rounded-xl object-cover"></x-slot:img-end>
 
-        <div class="mb-auto space-y-1">
-            <p>But it could just as easily have been a <code>{{ '<h1>' }}</code>.</p>
-            <p>Use custom title tags to properly structure your pages headings.</p>
+        <x-slot:title>Custom image styling</x-slot:title>
+
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>You can use the <code>image-classes</code> and <code>image-end-classes</code> attributes to style the <code>figure</code> elements wrapping your img slots.</p>
         </div>
+
+        <x-slot:actions class="justify-end">
+            <x-button sm>Smol Action</x-button>
+        </x-slot:actions>
+    </x-card>
+
+    <x-card bordered img-side class="shadow-xl">
+        <x-slot:img
+            src="https://placehold.co/100x400"
+            alt="100px by 400px placeholder"
+            class="h-full object-cover"></x-slot:img>
+
+        <x-slot:title>Side images</x-slot:title>
+
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>You can use the <code>img-side</code> attribute to restyle your image to the side of the body content.</p>
+            <p>Though, you might be better off applying this using a reponsive class:
+                <pre><code>{{ "<x-card class=\"lg:card-side\">" }}</code></pre>
+            </p>
+        </div>
+
+        <x-slot:actions class="justify-end">
+            <x-button sm>Smol Action</x-button>
+        </x-slot:actions>
+    </x-card>
+
+    <x-card img-full class="shadow-xl">
+        <x-slot:img
+            src="https://placehold.co/400x150"
+            alt="400px by 150px placeholder"></x-slot:img>
+
+        <x-slot:title>Image as card background</x-slot:title>
+
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>You can use the <code>img-full</code> attribute to make your image slot cover the card.</p>
+        </div>
+
+        <x-slot:actions class="justify-end">
+            <x-button sm>Smol Action</x-button>
+        </x-slot:actions>
+    </x-card>
+
+    <x-card class="bg-primary text-primary-content shadow-xl">
+        <x-slot:title>Easily recoloured</x-slot:title>
+
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>You can easily restyle the card colours.</p>
+        </div>
+
+        <x-slot:actions class="justify-end">
+            <x-button neutral>Hi There</x-button>
+        </x-slot:actions>
+    </x-card>
+
+    <x-card bordered class="shadow-xl">
+        <x-slot:title>Action reordering</x-slot:title>
+
+        <div class="mb-auto max-w-sm space-y-1">
+            <p>In this example I have reordered the actions to the start of the card-body using the class <code>-order-1</code>.</p>
+            <p>Your mileage on that may vary... We might add an alternate slot for <code>actions-start</code>.</p>
+        </div>
+
+        <x-slot:actions class="-order-1 justify-end">
+            <x-button class="absolute right-2 top-2" circle ghost sm>✕</x-button>
+        </x-slot:actions>
     </x-card>
 </div>
