@@ -83,3 +83,21 @@
         </x-slot:modal>
     </x-modal>
 </div>
+
+<h3>Modal using alpine ref</h3>
+<div class="not-prose">
+    <div x-data>
+        <x-modal x-ref="modal" close-backdrop>
+            <x-button @click="$refs.modal.showModal()">Modal using alpine x-ref</x-button>
+            <x-slot:modal>
+                <x-app.modal-close />
+                <div class="mockup-code">
+                    <pre><code>{{ '<div x-data>' }}</code></pre>
+                    <pre><code>  {{ "<x-button @click=\"\$refs.modal.showModal()\">" }}</code></pre>
+                    <pre><code>  ...</code></pre>
+                    <pre><code>  {{ "<x-modal x-ref=\"modal\">" }}</code></pre>
+                </div>
+            </x-slot:modal>
+        </x-modal>
+    </div>
+</div>
