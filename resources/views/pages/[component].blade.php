@@ -20,7 +20,7 @@
 
     <div class="container mx-auto">
         <div class="prose max-w-none">
-            @includeFirst(["sections.{$component}", 'component-not-found'])
+            @includeFirst(["sections.{$component}", 'partials.component-not-found'])
         </div>
     </div>
 
