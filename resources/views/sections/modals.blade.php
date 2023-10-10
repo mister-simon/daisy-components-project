@@ -1,6 +1,6 @@
-<h2>Modals</h2>
+<h1>Modals</h1>
 
-<h3>Basic Modal</h3>
+<h2>Basic Modal</h2>
 
 <div class="not-prose">
     <x-modal>
@@ -10,7 +10,7 @@
     </x-modal>
 </div>
 
-<h3>Cross Button Modal</h3>
+<h2>Cross Button Modal</h2>
 <div class="not-prose">
     <x-modal>
         @aware(['id'])
@@ -22,7 +22,7 @@
     </x-modal>
 </div>
 
-<h3>Modal with Actions</h3>
+<h2>Modal with Actions</h2>
 <div class="not-prose">
     <x-modal>
         @aware(['id'])
@@ -38,7 +38,7 @@
     </x-modal>
 </div>
 
-<h3>Modal closing when backdrop is clicked</h3>
+<h2>Modal closing when backdrop is clicked</h2>
 <div class="not-prose">
     <x-modal close-backdrop>
         @aware(['id'])
@@ -50,7 +50,7 @@
     </x-modal>
 </div>
 
-<h3>Modal positions</h3>
+<h2>Modal positions</h2>
 <div class="not-prose">
     <x-modal top close-backdrop>
         @aware(['id'])
@@ -83,7 +83,7 @@
     </x-modal>
 </div>
 
-<h3>Modal using alpine ref</h3>
+<h2>Modal using alpine ref</h2>
 <div class="not-prose">
     <div x-data>
         <x-modal x-ref="modal" close-backdrop>

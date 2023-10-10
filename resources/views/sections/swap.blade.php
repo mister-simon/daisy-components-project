@@ -1,6 +1,6 @@
-<h2>Swap</h2>
+<h1>Swap</h1>
 
-<h3>Basic swap</h3>
+<h2>Basic swap</h2>
 
 <div class="flex flex-col items-start gap-4">
 
@@ -31,7 +31,7 @@
     </x-swap>
 </div>
 
-<h3>States</h3>
+<h2>States</h2>
 
 <div class="flex flex-col items-start gap-4">
 
@@ -57,7 +57,7 @@
     </x-swap>
 </div>
 
-<h3>Animations</h3>
+<h2>Animations</h2>
 
 <x-swap rotate>
     <x-app.icon-moon />

@@ -1,6 +1,6 @@
-<h2>Badges</h2>
+<h1>Badges</h1>
 
-<h3>Badges with brand colors</h3>
+<h2>Badges with brand colors</h2>
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-badge>badge</x-badge>
     <x-badge neutral>Neutral</x-badge>
@@ -14,7 +14,7 @@
     <x-badge error>Error</x-badge>
 </div>
 
-<h3>Outline badges</h3>
+<h2>Outline badges</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-badge outline>badge</x-badge>
@@ -29,7 +29,7 @@
     <x-badge error outline>Error</x-badge>
 </div>
 
-<h3>Badge sizes</h3>
+<h2>Badge sizes</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-badge lg>Large</x-badge>
@@ -38,7 +38,7 @@
     <x-badge xs>Tiny</x-badge>
 </div>
 
-<h3>Badges in buttons</h3>
+<h2>Badges in buttons</h2>
 
 <div class="not-prose">
     <x-button>
@@ -52,16 +52,16 @@
     </x-button>
 </div>
 
-<h3 class="flex items-center gap-2">Badges in text <x-badge lg outline>Wow</x-badge></h3>
+<h2 class="flex items-center gap-2">Badges in text <x-badge lg outline>Wow</x-badge></h2>
 
-<h3>Badge tags</h3>
+<h2>Badge tags</h2>
 
 <div>
     <x-badge tag="marquee" class="motion-reduce:hidden">Don't use marquee</x-badge>
     <x-badge tag="div" class="motion-safe:hidden">I'm a div</x-badge>
 </div>
 
-<h3>Empty badges</h3>
+<h2>Empty badges</h2>
 
 <div class="not-prose grid w-min grid-flow-col-dense grid-rows-4 place-items-center gap-2">
     <x-badge lg />

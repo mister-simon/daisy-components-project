@@ -1,6 +1,6 @@
-<h2>Avatars</h2>
+<h1>Avatars</h1>
 
-<h3>Basic avatar</h3>
+<h2>Basic avatar</h2>
 
 <div class="not-prose">
     <x-avatar class="w-20">
@@ -8,7 +8,7 @@
     </x-avatar>
 </div>
 
-<h3>Avatar with mask</h3>
+<h2>Avatar with mask</h2>
 
 <div class="not-prose">
     <x-avatar class="w-20">
@@ -18,7 +18,7 @@
     </x-avatar>
 </div>
 
-<h3>Avatar with presence</h3>
+<h2>Avatar with presence</h2>
 
 <div class="not-prose">
     <x-avatar class="w-20" :online="true">
@@ -33,7 +33,7 @@
     </x-avatar>
 </div>
 
-<h3>Avatar with ring</h3>
+<h2>Avatar with ring</h2>
 
 <div class="not-prose">
     <x-avatar class="w-20">
@@ -43,7 +43,7 @@
     </x-avatar>
 </div>
 
-<h3>Avatar with Placeholder</h3>
+<h2>Avatar with Placeholder</h2>
 
 <div class="not-prose">
     <x-avatar>
@@ -55,7 +55,7 @@
 
 <p class="text-sm">Note the width is being applied to the mask slot in this case</p>
 
-<h3>Grouped avatars</h3>
+<h2>Grouped avatars</h2>
 
 <div class="not-prose">
     <div class="avatar-group -space-x-6">

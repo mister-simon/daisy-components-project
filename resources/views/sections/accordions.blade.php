@@ -1,7 +1,7 @@
-<h2>Accordions</h2>
+<h1>Accordions</h1>
 
 <div class="space-y-2">
-    <h3>Basic accordion</h3>
+    <h2>Basic accordion</h2>
 
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
@@ -12,7 +12,7 @@
         </x-accordion>
     @endfor
 
-    <h3>Accordion (Plus)</h3>
+    <h2>Accordion (Plus)</h2>
 
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
@@ -24,7 +24,7 @@
             <x-slot:content>This is my accordion contents.</x-slot:content>
         </x-accordion>
     @endfor
-    <h3>Accordion (Arrow)</h3>
+    <h2>Accordion (Arrow)</h2>
 
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
@@ -37,7 +37,7 @@
         </x-accordion>
     @endfor
 
-    <h3>Joined accordion</h3>
+    <h2>Joined accordion</h2>
 
     <div class="join join-vertical w-full">
         @for ($i = 0; $i < 3; $i++)

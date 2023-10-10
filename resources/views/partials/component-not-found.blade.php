@@ -1,1 +1,1 @@
-<h3>Couldn't find that component...</h3>
+<h1>Couldn't find that component...</h1>

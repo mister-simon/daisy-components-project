@@ -1,6 +1,6 @@
-<h2>Buttons</h2>
+<h1>Buttons</h1>
 
-<h3>Buttons with brand colors</h3>
+<h2>Buttons with brand colors</h2>
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button>Button</x-button>
     <x-button neutral>Neutral</x-button>
@@ -15,7 +15,7 @@
     <x-button error>Error</x-button>
 </div>
 
-<h3>Active buttons</h3>
+<h2>Active buttons</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button active>Button</x-button>
@@ -31,7 +31,7 @@
     <x-button error active>Error</x-button>
 </div>
 
-<h3>Outline buttons</h3>
+<h2>Outline buttons</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button outline>Button</x-button>
@@ -47,13 +47,13 @@
     <x-button error outline>Error</x-button>
 </div>
 
-<h3>Disabled buttons</h3>
+<h2>Disabled buttons</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button disabled>Button</x-button>
 </div>
 
-<h3>Button sizes</h3>
+<h2>Button sizes</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button lg>Large</x-button>
@@ -62,19 +62,19 @@
     <x-button xs>Tiny</x-button>
 </div>
 
-<h3>Wide</h3>
+<h2>Wide</h2>
 
 <div class="not-prose">
     <x-button wide>Wide</x-button>
 </div>
 
-<h3>Glass</h3>
+<h2>Glass</h2>
 
 <div class="not-prose inline-block bg-accent px-10 py-4">
     <x-button glass>This button has a glass effect</x-button>
 </div>
 
-<h3>Square</h3>
+<h2>Square</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button square>
@@ -89,7 +89,7 @@
     </x-button>
 </div>
 
-<h3>Circle</h3>
+<h2>Circle</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button circle>
@@ -104,7 +104,7 @@
     </x-button>
 </div>
 
-<h3>Icon at start / end</h3>
+<h2>Icon at start / end</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button>
@@ -122,13 +122,13 @@
     </x-button>
 </div>
 
-<h3>Block</h3>
+<h2>Block</h2>
 
 <div class="not-prose">
     <x-button block>Block</x-button>
 </div>
 
-<h3>Loading spinner</h3>
+<h2>Loading spinner</h2>
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button square>
@@ -139,7 +139,7 @@
     </x-button>
 </div>
 
-<h3>No click animation</h3>
+<h2>No click animation</h2>
 
 <div class="not-prose">
     <x-button no-animation>No animation when clicked</x-button>
