@@ -13,7 +13,7 @@
             Home
         </x-button>
     </li>
-    <x-nav-divider />
+    <x-app.nav-divider />
     @foreach ($sections as $section)
         <li>
             <x-button

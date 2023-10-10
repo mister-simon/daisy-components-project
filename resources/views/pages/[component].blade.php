@@ -14,9 +14,9 @@
 </head>
 
 <body class="flex min-h-screen flex-col">
-    <nav>
-        <x-nav />
-    </nav>
+    <app.nav>
+        <x-app.nav />
+    </app.nav>
 
     <div class="container mx-auto">
         <div class="prose max-w-none">
@@ -25,7 +25,7 @@
     </div>
 
     <footer class="mt-auto">
-        <x-nav />
+        <x-app.nav />
     </footer>
 </body>
 

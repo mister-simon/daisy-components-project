@@ -60,17 +60,17 @@
 <h3>Animations</h3>
 
 <x-swap rotate>
-    <x-icon-moon />
+    <x-app.icon-moon />
 
     <x-slot:on>
-        <x-icon-sun />
+        <x-app.icon-sun />
     </x-slot:on>
 </x-swap>
 
 <x-swap flip>
-    <x-icon-moon />
+    <x-app.icon-moon />
 
     <x-slot:on>
-        <x-icon-sun />
+        <x-app.icon-sun />
     </x-slot:on>
 </x-swap>
