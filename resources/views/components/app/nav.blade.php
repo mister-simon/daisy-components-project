@@ -5,7 +5,7 @@
         ->transform(fn($filename) => Str::beforeLast($filename, '.blade.php'));
 @endphp
 
-<ul class="mt-auto flex items-center justify-center gap-4 p-8">
+<ul class="mt-auto flex flex-wrap items-center justify-center gap-4 p-8">
     <li>
         <x-button
             tag="a"
