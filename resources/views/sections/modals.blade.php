@@ -1,5 +1,4 @@
-<h2>
-    Modals</h2>
+<h2>Modals</h2>
 
 <h3>Basic Modal</h3>
 
