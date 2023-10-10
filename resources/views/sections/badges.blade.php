@@ -23,7 +23,6 @@
     <x-badge secondary outline>Secondary</x-badge>
     <x-badge accent outline>Accent</x-badge>
     <x-badge ghost outline>Ghost</x-badge>
-    <x-badge link outline>Link</x-badge>
     <x-badge info outline>Info</x-badge>
     <x-badge success outline>Success</x-badge>
     <x-badge warning outline>Warning</x-badge>
@@ -38,3 +37,19 @@
     <x-badge sm>Small</x-badge>
     <x-badge xs>Tiny</x-badge>
 </div>
+
+<h3>Badges in buttons</h3>
+
+<div class="not-prose">
+    <x-button>
+        Inbox
+        <x-badge neutral>+99</x-badge>
+    </x-button>
+
+    <x-button class="relative">
+        Notifications
+        <x-badge neutral class="absolute right-0 top-0 -translate-y-1/2 translate-x-1/3 animate-pulse">New</x-badge>
+    </x-button>
+</div>
+
+<h3>Badges in text <x-badge lg outline>Wow</x-badge></h3>
