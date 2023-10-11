@@ -1,5 +1,12 @@
 <h1>Buttons</h1>
 
+<h2>Button tags</h2>
+<div class="not-prose flex flex-wrap items-center gap-2">
+    <x-button>{{ '<button>' }} by default</x-button>
+    <x-button tag="span">This is a {{ '<span>' }}</x-button>
+    <x-a>&lt;x-a&gt; works like an alias for &lt;button tag="a"&gt;</x-a>
+</div>
+
 <h2>Buttons with brand colors</h2>
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button>Button</x-button>

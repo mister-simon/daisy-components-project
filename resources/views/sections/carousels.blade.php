@@ -153,10 +153,10 @@
 
                     <div class="absolute inset-0 flex items-center p-2">
                         @if ($prevItemId)
-                            <x-button tag="a" circle ghost sm href="#{{ $prevItemId }}" class="mr-auto">❮</x-button>
+                            <x-a circle ghost sm href="#{{ $prevItemId }}" class="mr-auto">❮</x-a>
                         @endif
                         @if ($nextItemId)
-                            <x-button tag="a" circle ghost sm href="#{{ $nextItemId }}" class="ml-auto">❯</x-button>
+                            <x-a circle ghost sm href="#{{ $nextItemId }}" class="ml-auto">❯</x-a>
                         @endif
                     </div>
                 </x-carousel-item>

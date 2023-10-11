@@ -7,21 +7,20 @@
 
 <ul class="mt-auto flex flex-wrap items-center justify-center gap-4 p-8">
     <li>
-        <x-button
+        <x-a
             tag="a"
             href="/">
             Home
-        </x-button>
+        </x-a>
     </li>
     <x-app.nav-divider />
     @foreach ($sections as $section)
         <li>
-            <x-button
-                tag="a"
+            <x-a
                 :href="'/' . $section"
                 :active="request()->is($section)">
                 {{ $section }}
-            </x-button>
+            </x-a>
         </li>
     @endforeach
 </ul>
