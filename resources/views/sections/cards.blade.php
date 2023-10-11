@@ -50,10 +50,6 @@
             src="https://placehold.co/400x50"
             alt="400px by 50px placeholder"
             class="h-12 w-full object-cover"></x-slot:img>
-        <x-slot:img-end
-            src="https://placehold.co/400x50"
-            alt="400px by 50px placeholder"
-            class="h-12 w-full object-cover"></x-slot:img-end>
 
         <x-slot:title>Compact card</x-slot:title>
 
@@ -68,7 +64,7 @@
     </x-card>
 
     <x-card compact bordered class="shadow-xl">
-        <x-slot:title tag="span">This element is a span</x-slot:title>
+        <x-slot:title tag="span">This heading is actually a span</x-slot:title>
 
         <div class="mb-auto max-w-sm space-y-1">
             <p>But it could just as easily have been a <code>{{ '<h1>' }}</code>.</p>
@@ -175,7 +171,7 @@
 
             <div class="mb-auto max-w-sm space-y-1">
                 <p>This example has the glassy effect, which is pretty cool.</p>
-                <p>Should look good on image backgrounds too.</p>
+                <p>Looks pretty good on image backgrounds.</p>
             </div>
 
             <x-slot:actions class="justify-end">
