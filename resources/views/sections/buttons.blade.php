@@ -70,7 +70,8 @@
 
 <h2>Glass</h2>
 
-<div class="not-prose inline-block bg-accent px-10 py-4">
+<div class="not-prose relative inline-block overflow-hidden rounded-2xl bg-accent p-20">
+    <img src="https://placekitten.com/400/210" alt="" class="absolute inset-0 h-full w-full object-cover brightness-200">
     <x-button glass>This button has a glass effect</x-button>
 </div>
 

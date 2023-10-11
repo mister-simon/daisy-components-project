@@ -160,11 +160,27 @@
 
         <div class="mb-auto max-w-sm space-y-1">
             <p>In this example I have reordered the actions to the start of the card-body using the class <code>-order-1</code>.</p>
-            <p>Your mileage on that may vary... We might add an alternate slot for <code>actions-start</code>.</p>
+            <p>Alternately, you can just add your own actions section at the top of the card body with class <code>card-actions</code>.</p>
         </div>
 
         <x-slot:actions class="-order-1 justify-end">
-            <x-button class="absolute right-2 top-2" circle ghost sm>✕</x-button>
+            <x-button square neutral sm>✕</x-button>
         </x-slot:actions>
     </x-card>
+
+    <div class="relative overflow-hidden rounded-2xl bg-accent p-20">
+        <img src="https://placekitten.com/610/405" alt="" class="absolute inset-0 h-full w-full object-cover brightness-150">
+        <x-card bordered class="glass shadow-xl">
+            <x-slot:title>Glass style card</x-slot:title>
+
+            <div class="mb-auto max-w-sm space-y-1">
+                <p>This example has the glassy effect, which is pretty cool.</p>
+                <p>Should look good on image backgrounds too.</p>
+            </div>
+
+            <x-slot:actions class="justify-end">
+                <x-button primary>Hello</x-button>
+            </x-slot:actions>
+        </x-card>
+    </div>
 </div>
