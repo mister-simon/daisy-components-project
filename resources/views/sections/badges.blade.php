@@ -47,7 +47,7 @@
     </x-button>
 
     <div class="indicator">
-        <x-badge neutral class="indicator-item animate-pulse">New</x-badge>
+        <x-badge neutral class="indicator-item motion-safe:animate-pulse">New</x-badge>
         <x-button>Notifications</x-button>
     </div>
 </div>
