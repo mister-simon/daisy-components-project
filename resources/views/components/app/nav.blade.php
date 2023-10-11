@@ -6,16 +6,16 @@
 @endphp
 
 <ul class="mt-auto flex flex-wrap items-center justify-center gap-4 p-8">
-    <li>
+    <li @class(['scale-125' => request()->is('/')])>
         <x-a
-            tag="a"
-            href="/">
+            href="/"
+            :active="request()->is('/')">
             Home
         </x-a>
     </li>
     <x-app.nav-divider />
     @foreach ($sections as $section)
-        <li>
+        <li @class(['scale-125' => request()->is($section)])>
             <x-a
                 :href="'/' . $section"
                 :active="request()->is($section)">
