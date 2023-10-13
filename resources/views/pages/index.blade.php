@@ -20,13 +20,9 @@
 </head>
 
 <body class="flex min-h-screen flex-col">
-    <nav>
-        <x-app.nav />
-    </nav>
-
     <div class="container mx-auto">
         <div class="prose max-w-none">
-            <h1>Everything So Far</h1>
+            <h1 class="mt-4">Everything So Far</h1>
 
             <ul class="not-prose menu rounded-box menu-lg bg-base-200">
                 @foreach ($sections as $section)
@@ -35,10 +31,6 @@
             </ul>
         </div>
     </div>
-
-    <footer class="mt-auto">
-        <x-app.nav />
-    </footer>
 </body>
 
 </html>
