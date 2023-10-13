@@ -18,73 +18,15 @@
 
 <h2>Styling</h2>
 
-<p>Restyle radial progress bars with text / bg colour utilities.</p>
+<p>Restyle radial progress bars with text / bg colour utilities:</p>
 
 <div class="not-prose inline-grid grid-cols-8 place-items-center gap-4">
-    <x-radial-progress
-        value="90"
-        class="text-neutral"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-primary"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-secondary"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-accent"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-info"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-success"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-warning"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="text-error"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-neutral bg-neutral text-neutral-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-primary bg-primary text-primary-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-secondary bg-secondary text-secondary-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-accent bg-accent text-accent-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-info bg-info text-info-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-success bg-success text-success-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-warning bg-warning text-warning-content"
-        x-text="value" />
-    <x-radial-progress
-        value="90"
-        class="border-8 border-error bg-error text-error-content"
-        x-text="value" />
+    @foreach (['text-neutral', 'text-primary', 'text-secondary', 'text-accent', 'text-info', 'text-success', 'text-warning', 'text-error', 'border-8 border-neutral bg-neutral text-neutral-content', 'border-8 border-primary bg-primary text-primary-content', 'border-8 border-secondary bg-secondary text-secondary-content', 'border-8 border-accent bg-accent text-accent-content', 'border-8 border-info bg-info text-info-content', 'border-8 border-success bg-success text-success-content', 'border-8 border-warning bg-warning text-warning-content', 'border-8 border-error bg-error text-error-content'] as $classes)
+        <x-radial-progress
+            value="90"
+            :class="$classes"
+            x-text="value" />
+    @endforeach
 </div>
 <h2>Updating with alpine</h2>
 
