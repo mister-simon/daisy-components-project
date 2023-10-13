@@ -135,8 +135,14 @@
         Button <x-loading />
     </x-button>
 
-    <x-button x-data="{ loading: false, load() { this.loading = true; } }" x-on:click="load">
-        Button <x-loading x-show="loading" />
+    <x-button x-data="{
+        loading: false,
+        load() {
+            this.loading = true;
+            setTimeout(() => this.loading = false, 1000)
+        }
+    }" x-on:click="load" x-bind:disabled="loading" x-cloak>
+        <span x-text="loading ? 'loading' : 'Click me'">Click me</span> <x-loading x-show="loading" />
     </x-button>
 </div>
 
