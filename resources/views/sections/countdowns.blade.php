@@ -57,13 +57,9 @@
                 d.getMinutes(),
                 d.getSeconds(),
             ]
-        },
-        init() {
-            this.updateTime();
-            setInterval(this.updateTime.bind(this), 1000);
         }
     }"
     x-init="updateTime();
-    setInterval(updateTime, 1000)">
+    setInterval(() => updateTime(), 1000)">
     <x-countdown-item :count="12" x-model="time[0]" />:<x-countdown-item :count="30" x-model="time[1]" />:<x-countdown-item :count="30" x-model="time[2]" />
 </x-countdown>
