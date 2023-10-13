@@ -140,10 +140,15 @@
 
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button square>
-        <span class="loading loading-spinner"></span>
+        <x-loading />
     </x-button>
+
     <x-button>
-        <span class="loading loading-spinner"></span> Button
+        Button <x-loading />
+    </x-button>
+
+    <x-button x-data="{ loading: false, load() { this.loading = true; } }" x-on:click="load">
+        Button <x-loading x-show="loading" />
     </x-button>
 </div>
 
