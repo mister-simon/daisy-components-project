@@ -27,5 +27,5 @@
     x-data="{ value: 0 }"
     x-init="setInterval(() => value = (value + .1) % 100, 10)"
     max="100"
-    x-bind:value="value"
+    x-model="value"
     success />
