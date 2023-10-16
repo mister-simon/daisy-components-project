@@ -2,14 +2,15 @@
 
 <h2>Basic stats</h2>
 
-<div class="not-prose flex flex-col items-start">
+<div class="not-prose flex flex-col items-start gap-4">
 
     <x-stats
+        class="border"
         title="One single stat can be displayed"
         value="50 / 50"
         description="Might be useful?" />
 
-    <x-stats>
+    <x-stats class="border">
         <x-stat
             title="Amount of ice cream"
             value="10,000 litres"
@@ -112,7 +113,7 @@
 <h2>Default slot</h2>
 
 <div class="not-prose">
-    <x-stats>
+    <x-stats class="border">
         <x-stat
             title="Verticality"
             value="50%"
