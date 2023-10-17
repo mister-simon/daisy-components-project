@@ -32,7 +32,7 @@
     </div>
     <div>
         <x-range x-model="range" />
-        <x-range-measure steps="10" />
+        <x-range-measure steps="10" class="px-3" />
     </div>
     <div class="text-center text-xl">
         <span x-text="`${range}%`"></span>
@@ -53,10 +53,10 @@
 <h2>Sizes</h2>
 
 <div class="not-prose">
-    <x-range lg />
-    <x-range md />
-    <x-range sm />
-    <x-range xs />
+    <x-range lg measure value="100" step="10" />
+    <x-range md measure value="100" step="10" />
+    <x-range sm measure value="100" step="10" />
+    <x-range xs measure value="100" step="10" />
 </div>
 
 <h2>Colours</h2>
@@ -74,9 +74,9 @@
 
 <h2>Colours + extra custom measure styling</h2>
 
-<div class="not-prose relative flex items-center">
+<div class="not-prose relative my-10 flex items-center">
     <x-range value="40" step="20" primary class="relative z-10" />
-    <x-range-measure steps="5" class="absolute inset-0 px-4 text-primary">
+    <x-range-measure steps="5" class="absolute inset-0 px-3 text-primary">
         <x-app.icon-heart class="h-24 w-24 overflow-visible fill-primary stroke-primary" />
     </x-range-measure>
 </div>
