@@ -53,7 +53,7 @@
 
 <div class="space-y-2">
     <x-alert warning dismissable x-transition="">
-        This is a an alert with custom buttons
+        This is an alert with custom buttons
         <x-slot:action>
             <x-button @click="alert('Boop!')" primary sm class="shadow-md">Alert</x-button>
             <x-button @click="dismissed=true" sm>Close</x-button>
