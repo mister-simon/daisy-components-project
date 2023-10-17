@@ -8,6 +8,13 @@
     <x-checkbox checked />
 </div>
 
+<h2>Disabled state</h2>
+
+<div class="not-prose">
+    <x-checkbox disabled />
+    <x-checkbox disabled checked />
+</div>
+
 <h2>Label + form control</h2>
 
 <div class="not-prose max-w-sm">
