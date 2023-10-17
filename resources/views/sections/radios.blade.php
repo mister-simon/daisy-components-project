@@ -2,7 +2,7 @@
 
 <h2>Basic radio</h2>
 
-<div class="not-prose mt-8">
+<div class="not-prose">
     <x-radio name="rad1o" checked />
     <x-radio name="rad1o" />
 </div>

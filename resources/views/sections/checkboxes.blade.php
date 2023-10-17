@@ -2,7 +2,7 @@
 
 <h2>Basic checkboxes</h2>
 
-<div class="not-prose mt-8">
+<div class="not-prose">
     <x-checkbox />
     <x-checkbox x-init="$el.indeterminate = true" />
     <x-checkbox checked />
