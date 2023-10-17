@@ -1,12 +1,12 @@
-<h1>Text Inputs</h1>
+<h1>Text textareas</h1>
 
-<h2>Basic input</h2>
+<h2>Basic textarea</h2>
 
 <div class="not-prose rounded-box flex flex-col items-start gap-4 bg-base-200/50 p-4">
-    <x-input placeholder="I am default" />
-    <x-input placeholder="I have a border" bordered />
-    <x-input placeholder="I have no background" ghost />
-    <x-input placeholder="This input is disabled" bordered disabled />
+    <x-textarea placeholder="I am default" />
+    <x-textarea placeholder="I have a border" bordered />
+    <x-textarea placeholder="I have no background" ghost />
+    <x-textarea placeholder="This textarea is disabled" bordered disabled />
 </div>
 
 <h2>Label + form control</h2>
@@ -14,10 +14,10 @@
 <div class="not-prose rounded-box bg-base-200/50 p-4">
     <x-form-control>
         <x-label
-            text="This is the label for the input"
+            text="This is the label for the textarea"
             text-alt="And maybe this is helper text?"
             for="e1" />
-        <x-input
+        <x-textarea
             bordered
             id="e1"
             value="Don't forget to link up your labels. Otherwise, what's the point." />
@@ -32,7 +32,7 @@
             <x-slot:text class="badge badge-info badge-lg">You can restyle label text</x-slot:text>
             <x-slot:textAlt class="badge badge-success badge-lg">What a surprise</x-slot:textAlt>
         </x-label>
-        <x-input
+        <x-textarea
             bordered
             id="e2"
             value="You might prefer to keep things consistent though."
@@ -43,21 +43,21 @@
 <h2>Sizes</h2>
 
 <div class="not-prose rounded-box flex flex-col items-start gap-4 bg-base-200/50 p-4">
-    <x-input lg value="Large" />
-    <x-input md value="Medium / Default" />
-    <x-input sm value="Small" />
-    <x-input xs value="Extra-Small" />
+    <x-textarea lg value="Large" />
+    <x-textarea md value="Medium / Default" />
+    <x-textarea sm value="Small" />
+    <x-textarea xs value="Extra-Small" />
 </div>
 
 <h2>Colours</h2>
 
 <div class="not-prose rounded-box flex flex-wrap gap-4 bg-base-200/50 p-4">
-    <x-input lg value="default" />
-    <x-input lg primary value="primary" />
-    <x-input lg secondary value="secondary" />
-    <x-input lg accent value="accent" />
-    <x-input lg info value="info" />
-    <x-input lg success value="success" />
-    <x-input lg warning value="warning" />
-    <x-input lg error value="error" />
+    <x-textarea lg value="default" />
+    <x-textarea lg primary value="primary" />
+    <x-textarea lg secondary value="secondary" />
+    <x-textarea lg accent value="accent" />
+    <x-textarea lg info value="info" />
+    <x-textarea lg success value="success" />
+    <x-textarea lg warning value="warning" />
+    <x-textarea lg error value="error" />
 </div>
