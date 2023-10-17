@@ -8,21 +8,35 @@
 
 <h2>Stepped range with measure</h2>
 
-<div class="not-prose space-y-4 text-center text-xl" x-data="{ range: 50 }">
+<div class="not-prose space-y-8" x-data="{ range: 50 }">
     <div>
-        <x-range max="100" measure x-model="range" />
+        <x-range
+            max="100"
+            measure
+            x-model="range" />
     </div>
     <div>
-        <x-range max="100" step="25" measure x-model="range" />
+        <x-range
+            max="100"
+            step="25"
+            measure
+            x-model="range" />
     </div>
     <div>
-        <x-range min="50" max="100" step="10" measure x-model="range" />
+        <x-range
+            min="50"
+            max="100"
+            step="10"
+            measure
+            x-model="range" />
     </div>
     <div>
         <x-range x-model="range" />
         <x-range-measure steps="10" />
     </div>
-    <span x-text="`${range}%`"></span>
+    <div class="text-center text-xl">
+        <span x-text="`${range}%`"></span>
+    </div>
 </div>
 
 <h2>Label + form control</h2>
@@ -56,5 +70,13 @@
     <x-range lg success />
     <x-range lg warning />
     <x-range lg error />
+</div>
 
+<h2>Colours + extra custom measure styling</h2>
+
+<div class="not-prose relative flex items-center">
+    <x-range value="40" step="20" primary class="relative z-10" />
+    <x-range-measure steps="5" class="absolute inset-0 px-4 text-primary">
+        <x-app.icon-heart class="h-24 w-24 overflow-visible fill-primary stroke-primary" />
+    </x-range-measure>
 </div>
