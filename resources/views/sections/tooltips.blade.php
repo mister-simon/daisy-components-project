@@ -2,15 +2,23 @@
 
 <h2>Basic tooltip / defaults</h2>
 
-<div class="not-prose">
+<div class="not-prose mt-8">
     <x-tooltip tip="Thanks for hovering">
         <x-button>Hover me</x-button>
     </x-tooltip>
 </div>
 
+<h2>Forced open tooltip</h2>
+
+<div class="not-prose mt-8">
+    <x-tooltip tip="No need to hover" force-open>
+        <x-button>Hover me... Or don't.</x-button>
+    </x-tooltip>
+</div>
+
 <h2>Tooltip positions</h2>
 
-<div class="not-prose grid w-max grid-cols-3">
+<div class="not-prose mt-8 grid w-max grid-cols-3">
     <x-tooltip
         tip="Top"
         top
@@ -38,7 +46,7 @@
 </div>
 
 <h2>Tooltip colours</h2>
-<div class="not-prose flex max-w-max flex-wrap gap-2">
+<div class="not-prose mt-8 flex max-w-max flex-wrap gap-2">
     <x-tooltip tip="Default">
         <x-button>Default</x-button>
     </x-tooltip>
