@@ -7,6 +7,13 @@
     <x-radio name="rad1o" />
 </div>
 
+<h2>Disabled state</h2>
+
+<div class="not-prose">
+    <x-radio disabled />
+    <x-radio disabled checked />
+</div>
+
 <h2>Label + form control</h2>
 
 <div class="not-prose max-w-sm">
