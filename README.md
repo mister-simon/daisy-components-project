@@ -33,3 +33,18 @@ If you're copying out any of these examples, make sure you use the appropriate p
 ## That's all
 
 Enjoy!
+
+
+# Notes to self
+
+- Most of the harder components are done now, in theory!
+- Data input
+  - [ ] File input
+  - [ ] Rating
+  - [ ] Select
+- [ ] Layout
+- [ ] Navigation
+- [ ] Mockup
+- [ ] Improve navigation some more eventually
+- [ ] Work out how to tree-shake styles better
+  - Run a command to generate a list of used components / attributes+options, import as json into tailwind whitelist?
