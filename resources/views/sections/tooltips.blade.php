@@ -42,10 +42,6 @@
     <x-tooltip tip="Default">
         <x-button>Default</x-button>
     </x-tooltip>
-
-    <x-tooltip neutral tip="Neutral">
-        <x-button neutral>Neutral</x-button>
-    </x-tooltip>
     <x-tooltip primary tip="Primary">
         <x-button primary>Primary</x-button>
     </x-tooltip>
