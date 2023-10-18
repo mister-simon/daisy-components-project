@@ -37,7 +37,6 @@ Enjoy!
 
 # Notes to self
 
-- Most of the harder components are done now, in theory!
 - Data input
   - [ ] Select
 - [ ] Layout
@@ -46,3 +45,9 @@ Enjoy!
 - [ ] Improve navigation some more eventually
 - [ ] Work out how to tree-shake styles better
   - Run a command to generate a list of used components / attributes+options, import as json into tailwind whitelist?
+
+# Problems?
+
+- Rating items seem less flexible than most other nested / slotted components.
+  - E.g. If the user wants to put click handlers, etc, on it, they will run into roadblocks with `x-model` and `class` being the only attrs passed down from parent.
+  - Might be worth - extracting to item component, or - creating an optional slot with it's own attrs.
