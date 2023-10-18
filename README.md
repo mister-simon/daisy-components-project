@@ -37,8 +37,6 @@ Enjoy!
 
 # Notes to self
 
-- Data input
-  - [ ] Select
 - [ ] Layout
 - [ ] Navigation
 - [ ] Mockup
