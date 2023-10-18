@@ -87,7 +87,7 @@
 <h2>Half ratings</h2>
 
 <div class="not-prose">
-    <x-rating half max="5" />
+    <x-rating half max="5" name="halfs" />
 </div>
 
 <h2>Ratings out of x</h2>
@@ -102,4 +102,19 @@
             hidden
             class="-ml-2" />
     @endfor
+</div>
+
+<h2>Ratings with Alpine</h2>
+
+<div
+    class="not-prose w-min text-center"
+    x-data="{ rating: '3' }">
+    <x-rating
+        max="5"
+        hidden
+        name="alpine"
+        class="-ml-2"
+        x-model="rating" />
+
+    <p x-text="`${rating} / 5`" class="-mt-2 text-2xl"></p>
 </div>
