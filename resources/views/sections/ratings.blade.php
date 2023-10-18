@@ -21,7 +21,8 @@
     <x-rating
         name="checked"
         checked="0"
-        hidden />
+        hidden
+        class="-ml-2" />
 </div>
 
 <h2>Sizes</h2>
@@ -81,4 +82,37 @@
             value="4"
             class="mask mask-hexagon bg-teal-900">
     </x-rating>
+</div>
+
+<h2>Half ratings</h2>
+
+<div class="not-prose">
+    <x-rating half max="5" />
+</div>
+
+<h2>Ratings out of x</h2>
+
+<div class="not-prose flex w-min flex-col gap-2">
+    <x-rating
+        max="1"
+        name="max1"
+        checked="0"
+        hidden
+        class="-ml-2" />
+    <x-rating
+        max="2"
+        name="max2"
+        checked="1" />
+    <x-rating
+        max="3"
+        name="max3"
+        checked="2" />
+    <x-rating
+        max="4"
+        name="max4"
+        checked="3" />
+    <x-rating
+        max="5"
+        name="max5"
+        checked="4" />
 </div>
