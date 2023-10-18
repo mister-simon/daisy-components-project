@@ -39,7 +39,6 @@ Enjoy!
 
 - Most of the harder components are done now, in theory!
 - Data input
-  - [ ] File input
   - [ ] Rating
   - [ ] Select
 - [ ] Layout
