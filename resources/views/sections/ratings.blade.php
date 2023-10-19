@@ -40,6 +40,10 @@
     <x-rating
         name="colours"
         class="[&>input]:bg-info" />
+
+    <x-rating name="colours">
+        <x-slot:rating class="bg-info" x-model="rating"></x-slot:rating>
+    </x-rating>
 </div>
 
 <h2>Custom item classes</h2>
@@ -109,10 +113,19 @@
 <div
     class="not-prose w-min text-center"
     x-data="{ rating: '3' }">
+
     <x-rating
         max="5"
         hidden
         name="alpine"
+        class="-ml-2">
+        <x-slot:rating class="bg-green-500" x-model="rating"></x-slot:rating>
+    </x-rating>
+
+    <x-rating
+        max="5"
+        hidden
+        name="alpine2"
         class="-ml-2"
         x-model="rating" />
 
