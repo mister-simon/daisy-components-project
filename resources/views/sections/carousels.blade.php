@@ -169,6 +169,7 @@
     @php($items = range(1, 5))
 
     <div
+        class="relative"
         x-data="{
             // Initial states
             playing: true,
@@ -207,7 +208,6 @@
             get nextSlide() {
                 return this.findSlide(this.nextIndex);
             },
-        
             findSlide(i) {
                 return this.carousel.querySelector(`[data-slide='${i}']`);
             },
@@ -248,12 +248,20 @@
             },
             pause() {
                 this.wasPlaying = this.playing;
+        
+                if (this.playing === false) {
+                    return;
+                }
+        
                 this.stop();
+                this.playing = null;
             },
             resume() {
                 if (this.wasPlaying) {
-                    this.play();
+                    return this.play();
                 }
+        
+                this.stop();
             },
             toggle() {
                 if (this.playing) {
@@ -272,6 +280,12 @@
             @click="stop(); pause();"
             @mouseover="pause()"
             @mouseout="resume()">
+            <div class="sticky left-2 top-0 z-10 mt-2">
+                <x-badge x-show="playing === true" success>Playing</x-badge>
+                <x-badge x-show="playing === false" error>Stopped</x-badge>
+                <x-badge x-show="playing === null" warning>Paused</x-badge>
+            </div>
+
             <x-button
                 circle
                 ghost
@@ -301,20 +315,24 @@
                 @click="next()">
                 ❯
             </x-button>
-
-            <x-slot:outer-controls>
-                <div class="flex justify-center gap-2 py-2">
-                    <x-button
-                        x-bind:class="{
-                            'btn-success': !playing,
-                            'btn-warning': playing,
-                        }"
-                        x-text="playing ? 'Stop' : 'Play'"
-                        @click="toggle">
-                        Stop
-                    </x-button>
-                </div>
-            </x-slot:outer-controls>
         </x-carousel>
+
+        <div class="mt-2 flex items-center gap-2">
+            <x-button
+                success
+                sm
+                @click="play">
+                Play
+            </x-button>
+            <x-button
+                error
+                sm
+                @click="stop">
+                Stop
+            </x-button>
+            <x-toggle
+                x-model="playing"
+                @click="toggle" />
+        </div>
     </div>
 </div>
