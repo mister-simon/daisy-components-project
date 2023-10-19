@@ -2,6 +2,7 @@
 
 <h2>Basic checkboxes</h2>
 
+{{-- Indeterminate state is only accessed via JS --}}
 <div class="not-prose">
     <x-checkbox />
     <x-checkbox x-init="$el.indeterminate = true" />
@@ -17,6 +18,7 @@
 
 <h2>Label + form control</h2>
 
+{{-- See inputs examples for full demo of form control / label --}}
 <div class="not-prose max-w-sm">
     <x-form-control>
         <x-label class="cursor-pointer">

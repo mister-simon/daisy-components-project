@@ -3,6 +3,7 @@
 <h2>Basic Dropdown</h2>
 
 <div class="not-prose">
+    {{-- Dropdowns pair nicely with Menu components. --}}
     <x-dropdown>
         <x-slot:summary class="btn-primary">Default dropdown</x-slot:summary>
         <x-slot:content>

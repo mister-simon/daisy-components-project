@@ -46,9 +46,8 @@ Enjoy!
 
 # Problems / solutions?
 
-- Rating items seem less flexible than most other nested / slotted components.
-  - E.g. If the user wants to put click handlers, etc, on it, they will run into roadblocks with `x-model` and `class` being the only attrs passed down from parent.
-  - Might be worth - extracting to item component, or - creating an optional slot with it's own attrs.
+- Dropdowns feel a little messy, currently requiring both slots, but not massively making use of them.
+  - Would be nice to make summary more compatible with button components, etc.
 - `@php($optionalSlot ??= new \Illuminate\View\ComponentSlot())` This could prove extremely useful.
   - Possible to leverage this to accept attributes / other props?
   - `@php($nameSlot ??= new \Illuminate\View\ComponentSlot($attributes->get('name')))`

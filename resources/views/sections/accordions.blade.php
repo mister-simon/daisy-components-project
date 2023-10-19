@@ -3,9 +3,6 @@
 <h2>Basic accordion</h2>
 
 <div class="space-y-2">
-    {{-- Title slot is the clickable part of the accordion item --}}
-    {{-- Default slot is the inner content --}}
-    {{-- Open attribute sets the initial state of the accordion's inner radio --}}
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="border border-neutral bg-base-200"
@@ -65,7 +62,7 @@
 <h2>Styled accordion</h2>
 <div class="space-y-2">
     {{-- You may use scoped slot attributes to add styles --}}
-    {{-- Yuo may use tailwind "peer" pseudo-selectors to style based on open state --}}
+    {{-- You may use tailwind "peer" pseudo-selectors to style based on open state --}}
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="join-item border border-neutral bg-base-200"

@@ -75,7 +75,6 @@
 <h2>Bubble contents + additional styling</h2>
 
 <div class="not-prose rounded-box max-w-2xl bg-base-200 p-8">
-
     <x-chat>If you need extra style options, you can handle that using:
         <pre><code>&lt;x-slot:bubble class="blah"&gt;</code></pre>
     </x-chat>

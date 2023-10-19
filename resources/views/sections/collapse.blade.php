@@ -10,6 +10,8 @@
 
 <h2>Collapse (Plus)</h2>
 
+{{-- Plus attribute adds the "+" and "-" signs --}}
+{{-- Note the name is unique for this accordion group --}}
 <x-collapse
     class="border border-neutral bg-base-200"
     plus>
@@ -19,9 +21,9 @@
 
 <h2>Collapse (Arrow)</h2>
 
+{{-- Arrow attribute adds up and down arrow signs --}}
 <x-collapse
     class="border border-neutral bg-base-200"
-
     arrow>
     <x-slot:title>Click me to open up</x-slot:title>
     This is my collapse contents.
@@ -29,6 +31,7 @@
 
 <h2>Joined collapse</h2>
 
+{{-- Add a join styled wrapper element --}}
 <div class="join join-vertical w-full">
     @for ($i = 0; $i < 3; $i++)
         <x-collapse
@@ -42,6 +45,8 @@
 
 <h2>Styled collapse</h2>
 
+{{-- You may use scoped slot attributes to add styles --}}
+{{-- You may use tailwind "peer" pseudo-selectors to style based on open state --}}
 <x-collapse
     class="join-item border border-neutral bg-base-200"
     arrow>
@@ -51,15 +56,14 @@
 
 <h2>Collapse with Alpine</h2>
 
+{{-- You may also use the "checkbox" slot to add alpine attributes to the hidden checkbox button --}}
 <div class="space-y-2">
     @for ($i = 0; $i < 3; $i++)
         <x-collapse
             x-data="{ open: {{ (int) ($i === 0) }} }"
             class="border border-neutral bg-base-200"
             :open="$i === 0">
-            <x-slot:checkbox
-                x-model="open">
-            </x-slot:checkbox>
+            <x-slot:checkbox x-model="open"></x-slot:checkbox>
 
             <x-slot:title>
                 This is <span x-text="open ? 'open' : 'closed'"></span>
