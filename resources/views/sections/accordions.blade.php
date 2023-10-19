@@ -3,6 +3,9 @@
 <h2>Basic accordion</h2>
 
 <div class="space-y-2">
+    {{-- Title slot is the clickable part of the accordion item --}}
+    {{-- Default slot is the inner content --}}
+    {{-- Open attribute sets the initial state of the accordion's inner radio --}}
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="border border-neutral bg-base-200"
@@ -15,11 +18,13 @@
 
 <h2>Accordion (Plus)</h2>
 <div class="space-y-2">
+    {{-- Plus attribute adds the "+" and "-" signs --}}
+    {{-- Note the name is unique for this accordion group --}}
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="border border-neutral bg-base-200"
             :open="$i === 0"
-            group="plus"
+            name="plus"
             plus>
             <x-slot:title>Click me to open up</x-slot:title>
             This is my accordion contents.
@@ -29,11 +34,12 @@
 
 <h2>Accordion (Arrow)</h2>
 <div class="space-y-2">
+    {{-- Arrow attribute adds up and down arrow signs --}}
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="border border-neutral bg-base-200"
             :open="$i === 0"
-            group="arrow"
+            name="arrow"
             arrow>
             <x-slot:title>Click me to open up</x-slot:title>
             This is my accordion contents.
@@ -42,12 +48,13 @@
 </div>
 
 <h2>Joined accordion</h2>
+{{-- Add a join styled wrapper element --}}
 <div class="join join-vertical w-full">
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="join-item border border-neutral bg-base-200"
             :open="$i === 0"
-            group="joined"
+            name="joined"
             arrow>
             <x-slot:title>Click me to open up</x-slot:title>
             This is my accordion contents.
@@ -57,19 +64,27 @@
 
 <h2>Styled accordion</h2>
 <div class="space-y-2">
+    {{-- You may use scoped slot attributes to add styles --}}
+    {{-- Yuo may use tailwind "peer" pseudo-selectors to style based on open state --}}
     @for ($i = 0; $i < 3; $i++)
         <x-accordion
             class="join-item border border-neutral bg-base-200"
             :open="$i === 0"
-            group="joined"
+            name="joined"
             arrow>
-            <x-slot:title class="bg-neutral text-neutral-content peer-checked:bg-info peer-checked:text-info-content">Apply styles when selected.</x-slot:title>
-            <x-slot:content class="bg-neutral text-neutral-content peer-checked:bg-info peer-checked:text-info-content">This is done using the <code>peer-checked:</code> tailwind selector. You may add classes to title / content slots.</x-slot:content>
+            <x-slot:title class="bg-neutral text-neutral-content peer-checked:bg-info peer-checked:text-info-content">
+                Apply styles when selected.
+            </x-slot:title>
+            <x-slot:content class="bg-neutral text-neutral-content peer-checked:bg-info peer-checked:text-info-content">
+                This is done using the <code>peer-checked:</code> tailwind selector. You may add classes to title / content slots.
+            </x-slot:content>
         </x-accordion>
     @endfor
 </div>
 
 <h2>Accordion with Alpine</h2>
+
+{{-- You may also use the "radio" slot to add alpine attributes to the hidden radio button --}}
 <div
     class="space-y-2"
     x-data="{
@@ -81,7 +96,7 @@
             x-data="{ id: '{{ $i }}' }"
             class="border border-neutral bg-base-200"
             :open="$i === 0"
-            group="alpine">
+            name="alpine">
             <x-slot:radio
                 x-model="open"
                 x-bind:value="id">
