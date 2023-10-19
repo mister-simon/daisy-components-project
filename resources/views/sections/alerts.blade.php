@@ -10,6 +10,7 @@
 
 <h2>Alerts with custom icon</h2>
 
+{{-- Use the icon slot to add a custom icon / style --}}
 <div class="space-y-2">
     <x-alert>
         <x-slot:icon>
@@ -21,6 +22,7 @@
 
 <h2>Auto-dismiss Alerts</h2>
 
+{{-- Auto-dismiss adds a setTimeout, so timeout is defined in ms. --}}
 <div class="flex h-36 flex-col gap-20 overflow-auto bg-neutral p-8 text-neutral-content">
     <x-alert auto-dismiss="4000">I will disappear in 4 seconds</x-alert>
     <x-alert info auto-dismiss="5000">I will disappear in 5 seconds</x-alert>
@@ -44,6 +46,7 @@
 
 <h2>Dismissable Alerts</h2>
 
+{{-- Adding dismissable without using the "action" slot will add a default x button to close --}}
 <div class="space-y-2">
     <x-alert dismissable info>This is a basic dismissable alert</x-alert>
     <x-alert dismissable success x-transition.duration.1000ms="">This is a dismissable alert with a transition</x-alert>
@@ -51,6 +54,7 @@
 
 <h2>Dismissable Alerts / Custom Action</h2>
 
+{{-- Use the action slot for custom actions, use alpine "dismissed" to control the closed state of the alert --}}
 <div class="space-y-2">
     <x-alert warning dismissable x-transition="">
         This is an alert with custom buttons

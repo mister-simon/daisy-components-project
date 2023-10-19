@@ -3,6 +3,8 @@
 <h2>Most Basic Cards</h2>
 
 <div class="not-prose flex flex-wrap gap-4">
+    {{-- Use the default slot for the main content of the card. --}}
+    {{-- Central content is wrapped in a div to take it out of flex layout. --}}
     <x-card class="max-w-sm">
         <div>
             <p>This card just has some text inside.</p>
@@ -10,6 +12,7 @@
         </div>
     </x-card>
 
+    {{-- Add a border and shadow for more of a floating effect --}}
     <x-card bordered class="max-w-sm shadow-xl">
         <p>This card has slightly clearer bounds.</p>
         <p>It has a large tailwind shadow.</p>
@@ -20,6 +23,7 @@
 
 <h2>More examples</h2>
 
+{{-- Img and img-end slots are applied to img elements --}}
 <div class="not-prose flex flex-wrap items-start gap-x-4 gap-y-14">
     <x-card bordered class="shadow-xl">
         <x-slot:img
@@ -37,7 +41,7 @@
             <p>Start image, title, content, actions, and end image.</p>
             <p>The border and shadow are also applied here.</p>
             <p>Actions can be repositioned by styling the actions slot.</p>
-            <p>The title element is a h2 by default.</p>
+            <p>The title element is a h2 by default. But that can be changed.</p>
         </div>
 
         <x-slot:actions class="justify-end">
@@ -164,8 +168,7 @@
         </x-slot:actions>
     </x-card>
 
-    <div class="relative overflow-hidden rounded-2xl bg-accent p-20">
-        <img src="https://placekitten.com/610/405" alt="" class="absolute inset-0 h-full w-full object-cover brightness-150">
+    <div class="rounded-box relative overflow-hidden bg-slate-500 bg-[url(https://placekitten.com/400)] bg-cover p-20 bg-blend-color-dodge">
         <x-card bordered class="glass shadow-xl">
             <x-slot:title>Glass style card</x-slot:title>
 

@@ -1,6 +1,8 @@
 <h1>Buttons</h1>
 
 <h2>Button tags</h2>
+
+{{-- Use the tag attribute to change the button element --}}
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button>{{ '<button>' }} by default</x-button>
     <x-button tag="span">This is a {{ '<span>' }}</x-button>
@@ -8,6 +10,7 @@
 </div>
 
 <h2>Buttons with brand colors</h2>
+
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-button>Button</x-button>
     <x-button neutral>Neutral</x-button>
@@ -77,8 +80,7 @@
 
 <h2>Glass</h2>
 
-<div class="not-prose relative inline-block overflow-hidden rounded-2xl bg-accent p-20">
-    <img src="https://placekitten.com/400/210" alt="" class="absolute inset-0 h-full w-full object-cover brightness-200">
+<div class="not-prose rounded-box relative inline-block bg-slate-500 bg-[url(https://placekitten.com/400)] bg-cover p-20 text-neutral-content bg-blend-color-dodge">
     <x-button glass>This button has a glass effect</x-button>
 </div>
 

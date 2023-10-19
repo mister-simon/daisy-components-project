@@ -1,6 +1,7 @@
 <h1>Badges</h1>
 
 <h2>Badges with brand colors</h2>
+
 <div class="not-prose flex flex-wrap items-center gap-2">
     <x-badge>badge</x-badge>
     <x-badge neutral>Neutral</x-badge>
@@ -56,6 +57,8 @@
 
 <h2>Badge tags</h2>
 
+{{-- Use the tag attribute to change the element of the badge --}}
+{{-- Marquee is a very unpleasant visual example... Added motion safe version for a11y. --}}
 <div>
     <x-badge tag="marquee" class="motion-reduce:hidden">Don't use marquee</x-badge>
     <x-badge tag="div" class="motion-safe:hidden">I'm a div</x-badge>
@@ -113,5 +116,4 @@
     <x-badge error />
     <x-badge sm error />
     <x-badge xs error />
-
 </div>
