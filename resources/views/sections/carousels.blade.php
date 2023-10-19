@@ -168,6 +168,10 @@
 <div class="not-prose">
     @php($items = range(1, 5))
 
+    {{-- This example shows how you can make a fully functional autoplaying carousel  --}}
+    {{-- which loops, pauses on hover, stops on interation, has fixed arrows for      --}}
+    {{-- navigation, and additional methods for handling state. Be sure you allow     --}}
+    {{-- your users to opt out of anything autoplay / motion. It's for your own good. --}}
     <div
         class="relative"
         x-data="{
@@ -271,7 +275,18 @@
             },
             init() {
                 this._currentSlide = this.slides[0] ?? null;
-                this.play();
+        
+                // Decide whether to allow autoplay or not via motion reduce.
+                // Also, respect any changes to reduce motion setting.
+                let wantsReduced = true;
+                const motionReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+        
+                if (motionReduce) {
+                    wantsReduced = motionReduce.matches;
+                    motionReduce.addEventListener('change', () => motionReduce.matches ? this.stop() : null);
+                }
+        
+                wantsReduced ? this.stop() : this.play();
             }
         }">
         <x-carousel
@@ -280,7 +295,7 @@
             @click="stop(); pause();"
             @mouseover="pause()"
             @mouseout="resume()">
-            <div class="sticky left-2 top-0 z-10 mt-2">
+            <div class="sticky left-2 top-0 z-10 mt-2" x-cloak>
                 <x-badge x-show="playing === true" success>Playing</x-badge>
                 <x-badge x-show="playing === false" error>Stopped</x-badge>
                 <x-badge x-show="playing === null" warning>Paused</x-badge>
