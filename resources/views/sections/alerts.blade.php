@@ -20,7 +20,7 @@
     </x-alert>
 </div>
 
-<h2>Auto-dismiss Alerts</h2>
+<h2>Auto-dismiss alerts</h2>
 
 {{-- Auto-dismiss adds a setTimeout, so timeout is defined in ms. --}}
 <div class="flex h-36 flex-col gap-20 overflow-auto bg-neutral p-8 text-neutral-content">
@@ -32,7 +32,7 @@
     <p>The above alerts will auto-dismiss. They might have already gone.</p>
 </div>
 
-<h2>Auto-dismiss Alerts (dismiss after visible, requires <a href="https://alpinejs.dev/plugins/intersect" target="_blank" rel="noopener noreferrer">Alpine Intersect</a>)</h2>
+<h2>Auto-dismiss alerts (dismiss after visible, requires <a href="https://alpinejs.dev/plugins/intersect" target="_blank" rel="noopener noreferrer">Alpine Intersect</a>)</h2>
 
 <div class="flex h-36 flex-col gap-20 overflow-auto bg-neutral p-8 text-neutral-content">
     <p>Scroll down to reveal alerts. Each will dismiss after a set time</p>
@@ -44,7 +44,7 @@
     <x-alert error auto-dismiss="5000" dismiss-intersect>I will disappear 5 seconds after becoming fully visible</x-alert>
 </div>
 
-<h2>Dismissable Alerts</h2>
+<h2>Dismissable alerts</h2>
 
 {{-- Adding dismissable without using the "action" slot will add a default x button to close --}}
 <div class="space-y-2">
@@ -52,7 +52,7 @@
     <x-alert dismissable success x-transition.duration.1000ms="">This is a dismissable alert with a transition</x-alert>
 </div>
 
-<h2>Dismissable Alerts / Custom Action</h2>
+<h2>Dismissable alerts / custom action</h2>
 
 {{-- Use the action slot for custom actions, use alpine "dismissed" to control the closed state of the alert --}}
 <div class="space-y-2">

@@ -1,6 +1,6 @@
 <h1>Dropdowns</h1>
 
-<h2>Basic Dropdown</h2>
+<h2>Basic dropdown</h2>
 
 <div class="not-prose">
     <x-dropdown>
@@ -24,7 +24,7 @@
     </x-dropdown>
 </div>
 
-<h2>Dropdown - Content alignment</h2>
+<h2>Dropdown - content alignment</h2>
 <div class="not-prose">
     <x-dropdown top>
         <x-slot:summary class="btn btn-primary">Top</x-slot:summary>
@@ -63,7 +63,7 @@
     </x-dropdown>
 </div>
 
-<h2>Dropdown - Forced Open</h2>
+<h2>Dropdown - forced open</h2>
 <div class="not-prose">
     <x-dropdown force-open>
         <x-slot:summary class="btn btn-primary">Always open</x-slot:summary>

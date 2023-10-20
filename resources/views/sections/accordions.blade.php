@@ -13,7 +13,7 @@
     @endfor
 </div>
 
-<h2>Accordion (Plus)</h2>
+<h2>Accordion (plus)</h2>
 <div class="space-y-2">
     {{-- Plus attribute adds the "+" and "-" signs --}}
     {{-- Note the name is unique for this accordion group --}}
@@ -29,7 +29,7 @@
     @endfor
 </div>
 
-<h2>Accordion (Arrow)</h2>
+<h2>Accordion (arrow)</h2>
 <div class="space-y-2">
     {{-- Arrow attribute adds up and down arrow signs --}}
     @for ($i = 0; $i < 3; $i++)
@@ -79,7 +79,7 @@
     @endfor
 </div>
 
-<h2>Accordion with Alpine</h2>
+<h2>Accordion with alpine</h2>
 
 {{-- You may also use the "radio" slot to add alpine attributes to the hidden radio button --}}
 <div

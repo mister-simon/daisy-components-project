@@ -22,7 +22,7 @@
     <p>Press <x-kbd sm>F</x-kbd> to pay respects</p>
 </div>
 
-<h2>Key Combos</h2>
+<h2>Key combos</h2>
 
 <div class="not-prose">
     <p>

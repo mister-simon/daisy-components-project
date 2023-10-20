@@ -1,6 +1,6 @@
 <h1>Carousels</h1>
 
-<h2>Basic horizontal carousel - Snap to slide's start</h2>
+<h2>Basic horizontal carousel - snap to slide's start</h2>
 
 <div class="not-prose">
     <x-carousel class="max-w-md">
@@ -15,7 +15,7 @@
     </x-carousel>
 </div>
 
-<h2>Basic horizontal carousel - Snap to slide's center</h2>
+<h2>Basic horizontal carousel - snap to slide's center</h2>
 
 <div class="not-prose">
     <x-carousel center class="max-w-md">
@@ -30,7 +30,7 @@
     </x-carousel>
 </div>
 
-<h2>Basic horizontal carousel - Snap to slide's end</h2>
+<h2>Basic horizontal carousel - snap to slide's end</h2>
 
 <div class="not-prose">
     <x-carousel end class="max-w-md">

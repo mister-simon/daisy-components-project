@@ -8,7 +8,7 @@
     This is my collapse contents.
 </x-collapse>
 
-<h2>Collapse (Plus)</h2>
+<h2>Collapse (plus)</h2>
 
 {{-- Plus attribute adds the "+" and "-" signs --}}
 {{-- Note the name is unique for this accordion group --}}
@@ -19,7 +19,7 @@
     This is my collapse contents.
 </x-collapse>
 
-<h2>Collapse (Arrow)</h2>
+<h2>Collapse (arrow)</h2>
 
 {{-- Arrow attribute adds up and down arrow signs --}}
 <x-collapse
@@ -54,7 +54,7 @@
     <x-slot:content class="bg-neutral text-neutral-content peer-checked:bg-info peer-checked:text-info-content">This is done using the <code>peer-checked:</code> selector, passing classes to title / content slots.</x-slot:content>
 </x-collapse>
 
-<h2>Collapse with Alpine</h2>
+<h2>Collapse with alpine</h2>
 
 {{-- You may also use the "checkbox" slot to add alpine attributes to the hidden checkbox button --}}
 <div class="space-y-2">

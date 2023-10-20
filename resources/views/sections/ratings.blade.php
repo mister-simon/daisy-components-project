@@ -9,7 +9,9 @@
 <h2>Rating with hidden 0 value option</h2>
 
 <div class="not-prose">
-    <x-rating name="hidden" hidden />
+    <x-rating
+        name="hidden"
+        hidden />
 </div>
 
 <h2>Checked option</h2>
@@ -18,6 +20,8 @@
     <x-rating
         name="checked"
         checked="2" />
+
+    {{-- Negative margin is applied to account for the width of the hidden 0 input --}}
     <x-rating
         name="checked"
         checked="0"
@@ -36,11 +40,13 @@
 
 <h2>Colours</h2>
 
-<div class="not-prose">
+<div class="not-prose flex flex-col gap-2">
+    {{-- Use arbitrary selectors to style child elements --}}
     <x-rating
         name="colours"
         class="[&>input]:bg-info" />
 
+    {{-- Use the rating slot to add classes and other attributes directly --}}
     <x-rating name="colours">
         <x-slot:rating class="bg-info" x-model="rating"></x-slot:rating>
     </x-rating>
@@ -48,15 +54,26 @@
 
 <h2>Custom item classes</h2>
 
-<div class="not-prose">
+{{-- By default the rating classes will be set to "mask mask-star-2"... --}}
+{{-- You may override rating classes via the rating component, to set a custom mask etc. --}}
+{{-- If you want to set classes via the rating slot you should empty the rating-classes attribute. --}}
+<div class="not-prose flex flex-col gap-2">
     <x-rating
         name="custom_classes"
         class="gap-1"
         rating-classes="mask mask-heart" />
+
+    <x-rating
+        name="custom_classes_2"
+        class="gap-1"
+        rating-classes="">
+        <x-slot:rating class="mask mask-diamond"></x-slot:rating>
+    </x-rating>
 </div>
 
 <h2>Custom items</h2>
 
+{{-- The default slot can be used to create fully custom rating options. --}}
 <div class="not-prose rounded-box flex w-min items-center">
     <x-rating class="gap-1 drop-shadow-sm">
         <input
@@ -91,7 +108,7 @@
 <h2>Half ratings</h2>
 
 <div class="not-prose">
-    <x-rating half max="5" name="halfs" />
+    <x-rating half name="halves" />
 </div>
 
 <h2>Ratings out of x</h2>
@@ -108,20 +125,26 @@
     @endfor
 </div>
 
-<h2>Ratings with Alpine</h2>
+<h2>Ratings with alpine</h2>
 
 <div
     class="not-prose w-min text-center"
     x-data="{ rating: '3' }">
 
+    {{-- Alpine attributes can be applied to the scoped rating slot --}}
     <x-rating
         max="5"
         hidden
         name="alpine"
         class="-ml-2">
-        <x-slot:rating class="bg-green-500" x-model="rating"></x-slot:rating>
+        <x-slot:rating
+            class="bg-green-500"
+            x-model="rating">
+        </x-slot:rating>
     </x-rating>
 
+    {{-- Setting x-model on the rating component (rather than on the scoped rating slot) --}}
+    {{-- will actually apply x-model to the generated inner radio buttons --}}
     <x-rating
         max="5"
         hidden

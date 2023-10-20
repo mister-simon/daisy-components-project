@@ -21,8 +21,7 @@
             for="e1" />
         <x-select :options="$options"
             bordered
-            id="e1"
-            value="Don't forget to link up your labels. Otherwise, what's the point." />
+            id="e1" />
     </x-form-control>
 </div>
 
@@ -34,10 +33,10 @@
             <x-slot:text class="badge badge-info badge-lg">You can restyle label text</x-slot:text>
             <x-slot:textAlt class="badge badge-success badge-lg">What a surprise</x-slot:textAlt>
         </x-label>
-        <x-select :options="$options"
+        <x-select
+            :options="$options"
             bordered
             id="e2"
-            value="You might prefer to keep things consistent though."
             sm />
     </x-form-control>
 </div>
@@ -64,8 +63,10 @@
     <x-select :options="$options" lg error value="error" />
 </div>
 
-<h2>Select with Slot</h2>
+<h2>Select with slot</h2>
 
+{{-- If you want more control over your options you may use the default slot --}}
+{{-- However, you will need to provide your own selected option logic. --}}
 <div class="not-prose rounded-box flex flex-col items-start gap-4 bg-base-200/50 p-4">
     <x-select placeholder="You may use the default slot instead.">
         <optgroup label="You'll have to do your own 'selected' logic though">
@@ -77,7 +78,7 @@
     </x-select>
 </div>
 
-<h2>Select with Alpine</h2>
+<h2>Select with alpine</h2>
 
 <script>
     document.addEventListener(
@@ -90,8 +91,7 @@
     class="not-prose rounded-box flex flex-row items-center gap-4 bg-base-200/50 p-4"
     x-data="{
         selected: '0',
-        options: $store.options,
-        get value() { return this.options[this.selected]; }
+        get value() { return $store.options[this.selected]; }
     }">
     <x-select
         :options="$options"

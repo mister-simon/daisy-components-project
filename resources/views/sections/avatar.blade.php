@@ -44,7 +44,7 @@
     </x-avatar>
 </div>
 
-<h2>Avatar with Placeholder</h2>
+<h2>Avatar with placeholder</h2>
 
 {{-- Note the width is being applied to the mask slot in this case --}}
 <div class="not-prose">

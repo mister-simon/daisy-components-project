@@ -1,6 +1,6 @@
 <h1>Cards</h1>
 
-<h2>Most Basic Cards</h2>
+<h2>Most basic cards</h2>
 
 <div class="not-prose flex flex-wrap gap-4">
     {{-- Use the default slot for the main content of the card. --}}
