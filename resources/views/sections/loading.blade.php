@@ -58,8 +58,9 @@
 
 <p>Apply colours using <code>text-...</code> tailwind classes.</p>
 
-<div class="flex items-center gap-2">
+<div class="flex items-center">
     @foreach (['', 'text-neutral', 'text-primary', 'text-secondary', 'text-accent', 'text-success', 'text-info', 'text-warning', 'text-error'] as $style)
-        <x-loading :class="$style" />
+        @php($flip = $loop->even ? ' -scale-x-100' : '')
+        <x-loading :class="$style . $flip . ' w-16'" dots />
     @endforeach
 </div>

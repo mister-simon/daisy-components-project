@@ -62,14 +62,14 @@
 <h2>Colours</h2>
 
 <div class="not-prose grid grid-flow-col grid-rows-2 gap-2">
-    <x-range lg />
-    <x-range lg primary />
-    <x-range lg secondary />
-    <x-range lg accent />
-    <x-range lg info />
-    <x-range lg success />
-    <x-range lg warning />
-    <x-range lg error />
+    <x-range />
+    <x-range primary />
+    <x-range secondary />
+    <x-range accent />
+    <x-range info />
+    <x-range success />
+    <x-range warning />
+    <x-range error />
 </div>
 
 <h2>Colours + extra custom measure styling</h2>

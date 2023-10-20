@@ -52,12 +52,12 @@
 <h2>Colours</h2>
 
 <div class="not-prose rounded-box flex flex-wrap gap-4 bg-base-200/50 p-4">
-    <x-textarea lg value="default" />
-    <x-textarea lg primary value="primary" />
-    <x-textarea lg secondary value="secondary" />
-    <x-textarea lg accent value="accent" />
-    <x-textarea lg info value="info" />
-    <x-textarea lg success value="success" />
-    <x-textarea lg warning value="warning" />
-    <x-textarea lg error value="error" />
+    <x-textarea value="default" />
+    <x-textarea primary value="primary" />
+    <x-textarea secondary value="secondary" />
+    <x-textarea accent value="accent" />
+    <x-textarea info value="info" />
+    <x-textarea success value="success" />
+    <x-textarea warning value="warning" />
+    <x-textarea error value="error" />
 </div>

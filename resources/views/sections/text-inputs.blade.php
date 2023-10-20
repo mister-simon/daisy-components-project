@@ -52,12 +52,12 @@
 <h2>Colours</h2>
 
 <div class="not-prose rounded-box flex flex-wrap gap-4 bg-base-200/50 p-4">
-    <x-input lg value="default" />
-    <x-input lg primary value="primary" />
-    <x-input lg secondary value="secondary" />
-    <x-input lg accent value="accent" />
-    <x-input lg info value="info" />
-    <x-input lg success value="success" />
-    <x-input lg warning value="warning" />
-    <x-input lg error value="error" />
+    <x-input value="default" />
+    <x-input primary value="primary" />
+    <x-input secondary value="secondary" />
+    <x-input accent value="accent" />
+    <x-input info value="info" />
+    <x-input success value="success" />
+    <x-input warning value="warning" />
+    <x-input error value="error" />
 </div>
