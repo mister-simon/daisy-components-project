@@ -130,3 +130,23 @@
             description="That's at about 768px" />
     </x-stats>
 </div>
+
+<h2>Stats with alpine</h2>
+
+<x-stats
+    class="border"
+    x-data="{
+        stat: null,
+        getTime() {
+            this.stat = (new Date()).toLocaleTimeString();
+        },
+        init() {
+            this.getTime();
+            setInterval(() => this.getTime(), 500);
+        }
+    }">
+    <x-stat>
+        <x-slot:title x-text="'Your Current Time'">Time in UTC</x-slot:title>
+        <x-slot:value x-text="stat">{{ now()->toTimeString() }}</x-slot:value>
+    </x-stat>
+</x-stats>
