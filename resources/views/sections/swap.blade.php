@@ -3,7 +3,7 @@
 <h2>Basic swap</h2>
 
 <div class="flex flex-col items-start gap-4">
-
+    {{-- Default slot represents the off state --}}
     <x-swap class="text-center">
         Off
         <x-slot:on>On</x-slot:on>
@@ -25,8 +25,9 @@
         <x-slot:on class="btn btn-primary">Hello</x-slot:on>
     </x-swap>
 
+    {{-- Pointer events on "inactive" supressed to prevent inactive from receiving an active focus highlight --}}
     <x-swap>
-        <x-slot:off class="btn btn-primary btn-outline">Inactive</x-slot:off>
+        <x-slot:off class="btn btn-primary btn-outline pointer-events-none">Inactive</x-slot:off>
         <x-slot:on class="btn btn-primary btn-outline btn-active">Active</x-slot:on>
     </x-swap>
 </div>
