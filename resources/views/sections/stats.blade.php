@@ -3,13 +3,16 @@
 <h2>Basic stats</h2>
 
 <div class="not-prose flex flex-col items-start gap-4">
-
+    {{-- Pass attributes directly to the stats component --}}
     <x-stats
         class="border"
         title="One single stat can be displayed"
         value="50 / 50"
         description="Might be useful?" />
 
+    {{-- Or nest stat components within the stats to create adjoined items --}}
+    {{-- You may still pass attributes to individual stat components --}}
+    {{-- Or you can make use of scoped slots for more control --}}
     <x-stats class="border">
         <x-stat
             title="Amount of ice cream"
@@ -89,14 +92,14 @@
 <h2>Other styles</h2>
 
 <div class="not-prose">
-    <x-stats vertical class="bg-info text-info-content md:stats-horizontal">
+    <x-stats vertical class="bg-secondary text-secondary-content md:stats-horizontal">
         <x-stat
             title="Title"
             value="Value"
             description="Description" />
 
-        <x-stat class="bg-secondary text-secondary-content">
-            <x-slot:title class="text-secondary-content/80">
+        <x-stat class="bg-primary text-primary-content">
+            <x-slot:title class="text-primary-content/60">
                 Title with custom colour
             </x-slot:title>
             <x-slot:value>Cool value</x-slot:value>
