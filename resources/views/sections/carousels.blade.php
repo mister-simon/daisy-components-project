@@ -212,15 +212,14 @@
     @php($items = range(1, 5))
 
     {{-- This example shows how you can make a fully functional autoplaying carousel  --}}
-    {{-- which loops, pauses on hover, stops on interation, has fixed arrows for      --}}
-    {{-- navigation, and additional methods for handling state. Be sure you allow     --}}
-    {{-- your users to opt out of anything autoplay / motion. It's for your own good. --}}
+    {{-- which loops, stops on interation, has fixed arrows for navigation, and       --}}
+    {{-- additional methods for handling state. Be sure you allow your users to opt   --}}
+    {{-- out of anything autoplay / motion. It's for your own good.                   --}}
     <div
         class="relative"
         x-data="{
             // Initial states
             playing: true,
-            wasPlaying: true,
         
             // Length of timeout
             autoplay: 3000,
@@ -292,23 +291,6 @@
                 this.playing = false;
                 clearTimeout(this._timeout);
             },
-            pause() {
-                this.wasPlaying = this.playing;
-        
-                if (this.playing === false) {
-                    return;
-                }
-        
-                this.stop();
-                this.playing = null;
-            },
-            resume() {
-                if (this.wasPlaying) {
-                    return this.play();
-                }
-        
-                this.stop();
-            },
             toggle() {
                 if (this.playing) {
                     return this.stop();
@@ -334,9 +316,7 @@
         <x-carousel
             class="relative w-full"
             x-ref="carousel"
-            @click="stop(); pause();"
-            @mouseover.passive="pause()"
-            @mouseout.passive="resume()">
+            @click="stop()">
             <x-button
                 circle
                 ghost
@@ -376,12 +356,6 @@
 
         <div class="mt-2 flex items-center gap-2">
             <x-button
-                success
-                sm
-                @click="play">
-                Play
-            </x-button>
-            <x-button
                 error
                 sm
                 @click="stop">
@@ -390,6 +364,12 @@
             <x-toggle
                 x-model="playing"
                 @click="toggle" />
+            <x-button
+                success
+                sm
+                @click="play">
+                Play
+            </x-button>
         </div>
     </div>
 </div>
