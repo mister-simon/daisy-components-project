@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>File Inputs</h1>
 
 <h2>Basic input</h2>
@@ -19,8 +20,7 @@
             for="e1" />
         <x-file-input
             bordered
-            id="e1"
-            value="Don't forget to link up your labels. Otherwise, what's the point." />
+            id="e1" />
     </x-form-control>
 </div>
 
@@ -35,7 +35,7 @@
         <x-file-input
             bordered
             id="e2"
-            value="You might prefer to keep things consistent though."
+
             sm />
     </x-form-control>
 </div>
@@ -43,21 +43,24 @@
 <h2>Sizes</h2>
 
 <div class="not-prose rounded-box flex flex-col items-start gap-4 bg-base-200/50 p-4">
-    <x-file-input lg value="Large" />
-    <x-file-input md value="Medium / Default" />
-    <x-file-input sm value="Small" />
-    <x-file-input xs value="Extra-Small" />
+    <x-file-input lg />
+    <x-file-input md />
+    <x-file-input sm />
+    <x-file-input xs />
 </div>
 
 <h2>Colours</h2>
 
 <div class="not-prose rounded-box flex flex-wrap gap-4 bg-base-200/50 p-4">
-    <x-file-input value="default" />
-    <x-file-input primary value="primary" />
-    <x-file-input secondary value="secondary" />
-    <x-file-input accent value="accent" />
-    <x-file-input info value="info" />
-    <x-file-input success value="success" />
-    <x-file-input warning value="warning" />
-    <x-file-input error value="error" />
+    <x-file-input />
+    <x-file-input primary />
+    <x-file-input secondary />
+    <x-file-input accent />
+    <x-file-input info />
+    <x-file-input success />
+    <x-file-input warning />
+    <x-file-input error />
 </div>
+
+<h2>Set colour via :type attribute</h2>
+<x-file-input :type="$types->random()" />

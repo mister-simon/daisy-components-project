@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'ghost', 'info', 'success', 'warning', 'error', 'link']))
 <h1>Buttons</h1>
 
 <h2>Button tags</h2>
@@ -23,6 +24,7 @@
     <x-button success>Success</x-button>
     <x-button warning>Warning</x-button>
     <x-button error>Error</x-button>
+    <x-button :type="$types->random()">Set via :type</x-button>
 </div>
 
 <h2>Active buttons</h2>

@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Ranges</h1>
 
 <h2>Basic range</h2>
@@ -83,6 +84,9 @@
     <x-range warning />
     <x-range error />
 </div>
+
+<h2>Set colour via :type attribute</h2>
+<x-range :type="$types->random()" />
 
 <h2>Colours + extra custom measure styling</h2>
 

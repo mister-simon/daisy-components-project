@@ -1,3 +1,4 @@
+@php($types = collect(['info', 'success', 'warning', 'error']))
 <h1>Alerts</h1>
 
 <div class="space-y-2">
@@ -6,6 +7,8 @@
     <x-alert success>This is a successful alert</x-alert>
     <x-alert warning>This is your last warning</x-alert>
     <x-alert error>Something went wrong</x-alert>
+
+    <x-alert :type="$types->random()">This alert uses type to select style dynamically.</x-alert>
 </div>
 
 <h2>Alerts with custom icon</h2>

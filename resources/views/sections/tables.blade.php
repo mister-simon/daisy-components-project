@@ -22,7 +22,12 @@
                     <td>Medical Equipment Repairer</td>
                     <td>Feest-Wyman</td>
                     <td>1 week ago</td>
-                    <td class="bg-accent bg-opacity-70 text-accent-content">accent</td>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            accent
+                            <x-badge type="accent" xs />
+                        </div>
+                    </td>
                 </tr>
             </x-app.table-example-inner>
         </x-table>
@@ -51,6 +56,7 @@
 
 <h2>Visual table</h2>
 
+{{-- Check the app/table-visual-example-inner for how Alpine checkbox selection works. --}}
 <div class="not-prose">
     <div class="overflow-x-auto">
         <x-table zebra>

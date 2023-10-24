@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 @php($fakeTimes = [now()->subHour(), now()->subMinute(), now()->subSecond()])
 <h1>Chats</h1>
 
@@ -70,6 +71,7 @@
     <x-chat success end>Success</x-chat>
     <x-chat warning end>Warning</x-chat>
     <x-chat error end>Error</x-chat>
+    <x-chat :type="$types->random()">Set via :type</x-chat>
 </div>
 
 <h2>Bubble contents + additional styling</h2>

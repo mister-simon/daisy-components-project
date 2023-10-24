@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Tooltips</h1>
 
 <h2>Basic tooltip / defaults</h2>
@@ -71,5 +72,9 @@
     </x-tooltip>
     <x-tooltip error tip="Error">
         <x-button error>Error</x-button>
+    </x-tooltip>
+
+    <x-tooltip :type="$type = $types->random()" tip="Set via :type attribute">
+        <x-button :type="$type">Randomised colour</x-button>
     </x-tooltip>
 </div>

@@ -9,9 +9,10 @@
         <th>Name</th>
         <th>Job</th>
         <th>Favorite Color</th>
-        <th></th>
+        <th>Actions</th>
     </tr>
 </thead>
+<!-- body -->
 <tbody x-data>
     @for ($i = 0; $i < 4; $i++)
         <tr>
@@ -36,11 +37,11 @@
             <td>
                 Company Existingness
                 <br />
-                <span class="badge badge-ghost badge-sm">Existence Company Technician</span>
+                <span class="badge badge-ghost badge-sm">Company Existence Technician</span>
             </td>
             <td>Purple</td>
             <th>
-                <button class="btn btn-ghost btn-xs">details</button>
+                <a href="#" class="btn btn-ghost btn-xs">Details</a>
             </th>
         </tr>
     @endfor

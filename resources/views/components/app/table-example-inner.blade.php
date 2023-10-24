@@ -20,7 +20,12 @@
             <td>{{ $user->job }}</td>
             <td>{{ $user->company }}</td>
             <td>{{ $user->last_login->diffForHumans() }}</td>
-            <td class="bg-{{ $colour }} text-{{ $colour }}-content bg-opacity-70">{{ $colour }}</td>
+            <td>
+                <div class="flex items-center gap-2">
+                    {{ $colour }}
+                    <x-badge :type="$colour" xs />
+                </div>
+            </td>
         </tr>
     @endforeach
 </tbody>

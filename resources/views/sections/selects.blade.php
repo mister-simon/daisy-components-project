@@ -1,3 +1,5 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
+@php($sizes = collect(['lg' => 'Large', 'md' => 'Medium / Default', 'sm' => 'Small', 'xs' => 'Extra-small']))
 @php($options = ['hi', 'yo', 'hello', 'whats up'])
 
 <h1>Select Inputs</h1>
@@ -44,23 +46,24 @@
 <h2>Sizes</h2>
 
 <div class="not-prose rounded-box flex flex-col items-start gap-4 bg-base-200/50 p-4">
-    <x-select :options="$options" lg value="Large" />
-    <x-select :options="$options" md value="Medium / Default" />
-    <x-select :options="$options" sm value="Small" />
-    <x-select :options="$options" xs value="Extra-Small" />
+    <x-select :options="$sizes" lg value="lg" />
+    <x-select :options="$sizes" md value="md" />
+    <x-select :options="$sizes" sm value="sm" />
+    <x-select :options="$sizes" xs value="xs" />
 </div>
 
 <h2>Colours</h2>
 
 <div class="not-prose rounded-box flex flex-wrap gap-4 bg-base-200/50 p-4">
-    <x-select :options="$options" lg value="default" />
-    <x-select :options="$options" lg primary value="primary" />
-    <x-select :options="$options" lg secondary value="secondary" />
-    <x-select :options="$options" lg accent value="accent" />
-    <x-select :options="$options" lg info value="info" />
-    <x-select :options="$options" lg success value="success" />
-    <x-select :options="$options" lg warning value="warning" />
-    <x-select :options="$options" lg error value="error" />
+    <x-select :options="$types" lg :value="$types->search('default')" />
+    <x-select :options="$types" lg primary :value="$types->search('primary')" />
+    <x-select :options="$types" lg secondary :value="$types->search('secondary')" />
+    <x-select :options="$types" lg accent :value="$types->search('accent')" />
+    <x-select :options="$types" lg info :value="$types->search('info')" />
+    <x-select :options="$types" lg success :value="$types->search('success')" />
+    <x-select :options="$types" lg warning :value="$types->search('warning')" />
+    <x-select :options="$types" lg error :value="$types->search('error')" />
+    <x-select :options="$types" lg :type="$type = $types->random()" :value="$types->search($type)" />
 </div>
 
 <h2>Select with slot</h2>

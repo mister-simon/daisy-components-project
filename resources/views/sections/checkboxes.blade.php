@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Checkboxes</h1>
 
 <h2>Basic checkboxes</h2>
@@ -63,4 +64,7 @@
 
     <x-checkbox lg error />
     <x-checkbox lg error checked />
+
+    <x-checkbox lg :type="$type = $types->random()" />
+    <x-checkbox lg :type="$type" checked />
 </div>

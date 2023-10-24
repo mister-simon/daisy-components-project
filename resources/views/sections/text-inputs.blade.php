@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Text Inputs</h1>
 
 <h2>Basic input</h2>
@@ -60,4 +61,5 @@
     <x-input success value="success" />
     <x-input warning value="warning" />
     <x-input error value="error" />
+    <x-input :type="$types->random()" value="Set via :type" />
 </div>

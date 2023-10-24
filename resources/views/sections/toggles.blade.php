@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Toggles</h1>
 
 <h2>Basic toggles</h2>
@@ -61,4 +62,7 @@
 
     <x-toggle lg error />
     <x-toggle lg error checked />
+
+    <x-toggle lg :type="$type = $types->random()" />
+    <x-toggle lg :type="$type" checked />
 </div>

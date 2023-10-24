@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'ghost', 'info', 'success', 'warning', 'error']))
 <h1>Badges</h1>
 
 <h2>Badges with brand colors</h2>
@@ -13,6 +14,8 @@
     <x-badge success>Success</x-badge>
     <x-badge warning>Warning</x-badge>
     <x-badge error>Error</x-badge>
+
+    <x-badge :type="$types->random()">Set via :type</x-badge>
 </div>
 
 <h2>Outline badges</h2>

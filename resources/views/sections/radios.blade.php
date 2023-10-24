@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Radios</h1>
 
 <h2>Basic radio</h2>
@@ -64,4 +65,7 @@
 
     <x-radio lg name="raderroro" error />
     <x-radio lg name="raderroro" error checked />
+
+    <x-radio lg name="radrandomiseo" :type="$type = $types->random()" />
+    <x-radio lg name="radrandomiseo" :type="$type" checked />
 </div>

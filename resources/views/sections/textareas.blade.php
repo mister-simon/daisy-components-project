@@ -1,3 +1,4 @@
+@php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 <h1>Text textareas</h1>
 
 <h2>Basic textarea</h2>
@@ -60,4 +61,5 @@
     <x-textarea success value="success" />
     <x-textarea warning value="warning" />
     <x-textarea error value="error" />
+    <x-textarea :type="$types->random()" value="Set via :type" />
 </div>
