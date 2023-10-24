@@ -1,11 +1,9 @@
 @php
-    use Illuminate\Support\Facades\File;
     $sections = collect(File::allFiles(resource_path('views/sections')))
         ->map(fn($file) => $file->getFilename())
         ->transform(fn($filename) => Str::beforeLast($filename, '.blade.php'));
 @endphp
-
-<ul class="mt-auto flex flex-wrap items-center justify-center gap-4 p-8">
+<ul {{ $attributes->class('flex flex-wrap items-center justify-center gap-4 p-8') }}>
     <li @class(['scale-125' => request()->is('/')])>
         <x-a
             href="/"

@@ -1,5 +1,4 @@
 @php
-    use Illuminate\Support\Facades\File;
     $sections = collect(File::allFiles(resource_path('views/sections')))
         ->map(fn($file) => $file->getFilename())
         ->transform(fn($filename) => Str::beforeLast($filename, '.blade.php'));
@@ -22,15 +21,18 @@
 <body class="flex min-h-screen flex-col">
     <div class="container mx-auto">
         <div class="prose max-w-none">
-            <h1 class="mt-4">Everything So Far</h1>
-
-            <ul class="not-prose menu rounded-box menu-lg bg-base-200">
-                @foreach ($sections as $section)
-                    <li><a href="/{{ $section }}">{{ ucwords($section) }}</a></li>
-                @endforeach
-            </ul>
         </div>
     </div>
 </body>
 
 </html>
+
+<x-app.layout title="Daisy Components - Home">
+    <h1 class="mt-4">Everything So Far</h1>
+
+    <ul class="not-prose menu rounded-box menu-lg bg-base-200">
+        @foreach ($sections as $section)
+            <li><a href="{{ url($section) }}">{{ ucwords($section) }}</a></li>
+        @endforeach
+    </ul>
+</x-app.layout>

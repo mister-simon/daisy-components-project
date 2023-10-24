@@ -107,11 +107,22 @@
 
 <h2>Carousel with indicator buttons</h2>
 
+{{-- This works without any of the alpine stuff --}}
+{{-- However, since it uses anchor tags the page will jump around vertically. --}}
 <div class="not-prose">
     @php($items = range(1, 5))
 
-    <div>
-        <x-carousel class="max-w-md">
+    <div x-data="{
+        scrollTo(id) {
+            const carousel = this.$refs.carousel;
+            carousel.scrollTo({
+                left: document.getElementById(id).offsetLeft - carousel.offsetLeft
+            });
+        }
+    }">
+        <x-carousel
+            class="max-w-md"
+            x-ref="carousel">
             @foreach ($items as $i)
                 @php($itemId = "{$component->id}item{$i}")
                 <x-carousel-item :id="$itemId">
@@ -126,7 +137,12 @@
                 <div class="flex max-w-md justify-center gap-2 py-2">
                     @foreach ($items as $i)
                         @php($itemId = "{$component->id}item{$i}")
-                        <a href="#{{ $itemId }}" class="btn btn-xs">{{ $i }}</a>
+                        <a
+                            href="#{{ $itemId }}"
+                            class="btn btn-xs"
+                            @click.prevent="scrollTo('{{ $itemId }}')">
+                            {{ $i }}
+                        </a>
                     @endforeach
                 </div>
             </x-slot:outer-controls>
@@ -136,31 +152,58 @@
 
 <h2>Carousel with next/prev buttons</h2>
 
+{{-- This works without any of the alpine stuff --}}
+{{-- However, since it uses anchor tags the page will jump around vertically. --}}
 <div class="not-prose">
     @php($items = range(1, 5))
 
-    <x-carousel class="w-full">
-        @foreach ($items as $i)
-            @php($itemId = "{$component->id}item{$i}")
-            @php($prevItemId = $loop->first ? null : "{$component->id}item" . $i - 1)
-            @php($nextItemId = $loop->last ? null : "{$component->id}item" . $i + 1)
-            <x-carousel-item :id="$itemId" class="relative h-80 w-full">
-                <img
-                    src="https://placehold.co/200?text=Slide+{{ $i }}"
-                    alt="Placeholder image {{ $i }}"
-                    class="h-full w-full border border-neutral object-cover">
+    <div x-data="{
+        scrollTo(id) {
+            const carousel = this.$refs.carousel;
+            carousel.scrollTo({
+                left: document.getElementById(id).offsetLeft - carousel.offsetLeft
+            });
+        }
+    }">
+        <x-carousel class="w-full" x-ref="carousel">
+            @foreach ($items as $i)
+                @php($itemId = "{$component->id}item{$i}")
+                @php($prevItemId = $loop->first ? null : "{$component->id}item" . $i - 1)
+                @php($nextItemId = $loop->last ? null : "{$component->id}item" . $i + 1)
+                <x-carousel-item :id="$itemId" class="relative h-80 w-full">
+                    <img
+                        src="https://placehold.co/200?text=Slide+{{ $i }}"
+                        alt="Placeholder image {{ $i }}"
+                        class="h-full w-full border border-neutral object-cover">
 
-                <div class="absolute inset-0 flex items-center p-2">
-                    @if ($prevItemId)
-                        <x-a circle ghost sm href="#{{ $prevItemId }}" class="mr-auto">❮</x-a>
-                    @endif
-                    @if ($nextItemId)
-                        <x-a circle ghost sm href="#{{ $nextItemId }}" class="ml-auto">❯</x-a>
-                    @endif
-                </div>
-            </x-carousel-item>
-        @endforeach
-    </x-carousel>
+                    <div class="absolute inset-0 flex items-center p-2">
+                        @if ($prevItemId)
+                            <x-a
+                                circle
+                                ghost
+                                sm
+                                href="#{{ $prevItemId }}"
+                                class="mr-auto"
+                                x-on:click.prevent="scrollTo('{{ $prevItemId }}')">
+                                ❮
+                            </x-a>
+                        @endif
+                        @if ($nextItemId)
+                            <x-a
+                                circle
+                                ghost
+                                sm
+                                href="#{{ $nextItemId }}"
+                                class="ml-auto"
+                                x-on:click.prevent="scrollTo('{{ $nextItemId }}')">
+                                ❯
+                            </x-a>
+                        @endif
+                    </div>
+                </x-carousel-item>
+            @endforeach
+        </x-carousel>
+    </div>
 </div>
 
 <h2>Alpine powered autoplay</h2>
@@ -216,9 +259,8 @@
                 return this.carousel.querySelector(`[data-slide='${i}']`);
             },
             scrollToCurrent() {
-                this.$refs
-                    .carousel
-                    .scrollTo({ left: this._currentSlide.offsetLeft });
+                const carousel = this.$refs.carousel;
+                carousel.scrollTo({ left: this._currentSlide.offsetLeft - carousel.offsetLeft });
             },
             next() {
                 if (!this.nextSlide) return;
@@ -293,14 +335,8 @@
             class="relative w-full"
             x-ref="carousel"
             @click="stop(); pause();"
-            @mouseover="pause()"
-            @mouseout="resume()">
-            <div class="sticky left-2 top-0 z-10 mt-2" x-cloak>
-                <x-badge x-show="playing === true" success>Playing</x-badge>
-                <x-badge x-show="playing === false" error>Stopped</x-badge>
-                <x-badge x-show="playing === null" warning>Paused</x-badge>
-            </div>
-
+            @mouseover.passive="pause()"
+            @mouseout.passive="resume()">
             <x-button
                 circle
                 ghost
@@ -331,6 +367,12 @@
                 ❯
             </x-button>
         </x-carousel>
+
+        <div class="absolute left-2 top-2" x-cloak>
+            <x-badge x-show="playing === true" success>Playing</x-badge>
+            <x-badge x-show="playing === false" error>Stopped</x-badge>
+            <x-badge x-show="playing === null" warning>Paused</x-badge>
+        </div>
 
         <div class="mt-2 flex items-center gap-2">
             <x-button
