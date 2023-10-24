@@ -303,11 +303,12 @@
                 // Decide whether to allow autoplay or not via motion reduce.
                 // Also, respect any changes to reduce motion setting.
                 let wantsReduced = true;
-                const motionReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
         
-                if (motionReduce) {
-                    wantsReduced = motionReduce.matches;
-                    motionReduce.addEventListener('change', () => motionReduce.matches ? this.stop() : null);
+                const motionReduceQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        
+                if (motionReduceQuery) {
+                    wantsReduced = motionReduceQuery.matches;
+                    motionReduceQuery.addEventListener('change', () => motionReduceQuery.matches ? this.stop() : null);
                 }
         
                 wantsReduced ? this.stop() : this.play();
