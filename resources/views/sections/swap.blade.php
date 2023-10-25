@@ -1,5 +1,3 @@
-<h1>Swap</h1>
-
 <h2>Basic swap</h2>
 
 <div class="flex flex-col items-start gap-4">

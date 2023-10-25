@@ -1,5 +1,3 @@
-<h1>Loading</h1>
-
 <h2>Spinner</h2>
 
 <div class="flex items-center gap-2">
@@ -58,7 +56,7 @@
 
 <p>Apply colours using <code>text-...</code> tailwind classes.</p>
 
-<div class="flex items-center">
+<div class="flex flex-wrap items-center">
     @foreach (['', 'text-neutral', 'text-primary', 'text-secondary', 'text-accent', 'text-success', 'text-info', 'text-warning', 'text-error'] as $style)
         @php($flip = $loop->even ? ' -scale-x-100' : '')
         <x-loading :class="$style . $flip . ' w-16'" dots />

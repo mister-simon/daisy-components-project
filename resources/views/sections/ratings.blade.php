@@ -1,5 +1,3 @@
-<h1>Ratings</h1>
-
 <h2>Basic rating</h2>
 
 <div class="not-prose">
@@ -47,8 +45,8 @@
         class="[&>input]:bg-info" />
 
     {{-- Use the rating slot to add classes and other attributes directly --}}
-    <x-rating name="colours">
-        <x-slot:rating class="bg-info" x-model="rating"></x-slot:rating>
+    <x-rating name="colours2">
+        <x-slot:rating class="bg-info"></x-slot:rating>
     </x-rating>
 </div>
 

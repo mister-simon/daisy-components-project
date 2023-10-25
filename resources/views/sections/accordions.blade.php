@@ -1,5 +1,3 @@
-<h1>Accordions</h1>
-
 <h2>Basic accordion</h2>
 
 <div class="space-y-2">

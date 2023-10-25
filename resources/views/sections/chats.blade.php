@@ -1,6 +1,5 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
 @php($fakeTimes = [now()->subHour(), now()->subMinute(), now()->subSecond()])
-<h1>Chats</h1>
 
 <h2>Basic chat bubble</h2>
 

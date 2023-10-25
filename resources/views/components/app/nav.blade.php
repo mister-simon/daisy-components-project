@@ -3,22 +3,22 @@
         ->map(fn($file) => $file->getFilename())
         ->transform(fn($filename) => Str::beforeLast($filename, '.blade.php'));
 @endphp
-<ul {{ $attributes->class('flex flex-wrap items-center justify-center gap-4 p-8') }}>
-    <li @class(['scale-125' => request()->is('/')])>
-        <x-a
-            href="/"
-            :active="request()->is('/')">
+<ul {{ $attributes->class('menu') }}>
+    <li @class(['active' => request()->is('/')])>
+        <a
+            href="{{ url('/') }}"
+            @class(['active' => request()->is('/')])>
             Home
-        </x-a>
+        </a>
     </li>
     <x-app.nav-divider />
     @foreach ($sections as $section)
-        <li @class(['scale-125' => request()->is($section)])>
-            <x-a
-                :href="'/' . $section"
-                :active="request()->is($section)">
+        <li>
+            <a
+                href="{{ url($section) }}"
+                @class(['active' => request()->is($section)])>
                 {{ $section }}
-            </x-a>
+            </a>
         </li>
     @endforeach
 </ul>

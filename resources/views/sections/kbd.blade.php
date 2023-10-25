@@ -1,5 +1,3 @@
-<h1>Kbd</h1>
-
 <h2>Kbd</h2>
 
 <div class="not-prose">

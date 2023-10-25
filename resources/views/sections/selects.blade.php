@@ -2,8 +2,6 @@
 @php($sizes = collect(['lg' => 'Large', 'md' => 'Medium / Default', 'sm' => 'Small', 'xs' => 'Extra-small']))
 @php($options = ['hi', 'yo', 'hello', 'whats up'])
 
-<h1>Select Inputs</h1>
-
 <h2>Basic selects</h2>
 
 <div class="not-prose rounded-box flex flex-col items-start gap-4 bg-base-200/50 p-4">

@@ -1,5 +1,3 @@
-<h1>Dropdowns</h1>
-
 <h2>Basic dropdown</h2>
 
 <div class="not-prose">

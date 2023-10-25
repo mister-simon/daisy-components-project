@@ -1,5 +1,3 @@
-<h1>Avatars</h1>
-
 <h2>Basic avatar</h2>
 
 <div class="not-prose">

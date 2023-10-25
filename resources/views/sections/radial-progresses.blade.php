@@ -1,5 +1,3 @@
-<h1>Progress</h1>
-
 <h2>Basic radial progress</h2>
 
 {{-- Use the slot to display content in the centre of the radial component. --}}
@@ -22,7 +20,7 @@
 
 {{-- Any text / bg styles can be applied to the radial progress component. --}}
 {{-- Text colour applies to the radial curve as well as inner text. --}}
-<div class="not-prose inline-grid grid-cols-8 place-items-center gap-4">
+<div class="not-prose inline-grid grid-cols-4 place-items-center gap-4 md:grid-cols-8">
     @foreach (['text-neutral', 'text-primary', 'text-secondary', 'text-accent', 'text-info', 'text-success', 'text-warning', 'text-error', 'border-8 border-neutral bg-neutral text-neutral-content', 'border-8 border-primary bg-primary text-primary-content', 'border-8 border-secondary bg-secondary text-secondary-content', 'border-8 border-accent bg-accent text-accent-content', 'border-8 border-info bg-info text-info-content', 'border-8 border-success bg-success text-success-content', 'border-8 border-warning bg-warning text-warning-content', 'border-8 border-error bg-error text-error-content'] as $classes)
         <x-radial-progress
             value="90"

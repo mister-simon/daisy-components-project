@@ -1,5 +1,4 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
-<h1>Text Inputs</h1>
 
 <h2>Basic input</h2>
 

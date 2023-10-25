@@ -1,5 +1,3 @@
-<h1>Countdowns</h1>
-
 <h2>Basic static countdown</h2>
 
 <x-countdown :count="30" />

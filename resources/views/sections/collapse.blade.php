@@ -1,5 +1,3 @@
-<h1>Collapses</h1>
-
 <h2>Basic collapse</h2>
 
 <x-collapse

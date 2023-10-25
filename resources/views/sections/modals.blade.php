@@ -1,5 +1,3 @@
-<h1>Modals</h1>
-
 <h2>Basic modal</h2>
 
 {{-- The modal slot will be added directly after the default slot content.  --}}

@@ -1,5 +1,3 @@
-<h1>Stats</h1>
-
 <h2>Basic stats</h2>
 
 <div class="not-prose flex flex-col items-start gap-4">

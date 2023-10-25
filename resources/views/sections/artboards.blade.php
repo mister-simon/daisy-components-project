@@ -1,5 +1,3 @@
-<h1>Artboards</h1>
-
 <h2>Basic artboard</h2>
 
 <x-artboard size="1" class="border-y">

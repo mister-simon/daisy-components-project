@@ -1,5 +1,4 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'ghost', 'info', 'success', 'warning', 'error']))
-<h1>Badges</h1>
 
 <h2>Badges with brand colors</h2>
 

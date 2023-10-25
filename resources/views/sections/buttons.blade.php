@@ -1,5 +1,4 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'ghost', 'info', 'success', 'warning', 'error', 'link']))
-<h1>Buttons</h1>
 
 <h2>Button tags</h2>
 

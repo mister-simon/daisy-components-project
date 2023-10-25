@@ -1,5 +1,4 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
-<h1>Ranges</h1>
 
 <h2>Basic range</h2>
 

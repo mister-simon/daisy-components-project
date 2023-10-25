@@ -1,9 +1,7 @@
-<h1>Carousels</h1>
-
 <h2>Basic horizontal carousel - snap to slide's start</h2>
 
 <div class="not-prose">
-    <x-carousel class="max-w-md">
+    <x-carousel class="w-96 max-w-[90vw]">
         @for ($i = 0; $i < 5; $i++)
             <x-carousel-item>
                 <img
@@ -18,7 +16,7 @@
 <h2>Basic horizontal carousel - snap to slide's center</h2>
 
 <div class="not-prose">
-    <x-carousel center class="max-w-md">
+    <x-carousel center class="w-96 max-w-[90vw]">
         @for ($i = 0; $i < 5; $i++)
             <x-carousel-item>
                 <img
@@ -33,7 +31,7 @@
 <h2>Basic horizontal carousel - snap to slide's end</h2>
 
 <div class="not-prose">
-    <x-carousel end class="max-w-md">
+    <x-carousel end class="w-96 max-w-[90vw]">
         @for ($i = 0; $i < 5; $i++)
             <x-carousel-item>
                 <img
@@ -48,7 +46,7 @@
 <h2>Full width slides</h2>
 
 <div class="not-prose">
-    <x-carousel end class="w-48 max-w-full">
+    <x-carousel end class="w-48 max-w-[90vw]">
         @for ($i = 0; $i < 5; $i++)
             <x-carousel-item class="w-full">
                 <img
@@ -63,7 +61,7 @@
 <h2>Half width slides</h2>
 
 <div class="not-prose">
-    <x-carousel end class="w-96 max-w-full">
+    <x-carousel end class="w-96 max-w-[90vw]">
         @for ($i = 0; $i < 5; $i++)
             <x-carousel-item class="w-1/2">
                 <img
@@ -78,7 +76,7 @@
 <h2>Full-bleed carousel</h2>
 
 <div class="not-prose">
-    <x-carousel end center class="rounded-box max-w-md space-x-4 bg-neutral p-4">
+    <x-carousel end center class="rounded-box w-96 max-w-[90vw] space-x-4 bg-neutral p-4">
         @for ($i = 0; $i < 5; $i++)
             <x-carousel-item class="w-2/3">
                 <img
@@ -121,7 +119,7 @@
         }
     }">
         <x-carousel
-            class="max-w-md"
+            class="w-96 max-w-[90vw]"
             x-ref="carousel">
             @foreach ($items as $i)
                 @php($itemId = "{$component->id}item{$i}")
@@ -134,7 +132,7 @@
             @endforeach
 
             <x-slot:outer-controls>
-                <div class="flex max-w-md justify-center gap-2 py-2">
+                <div class="flex w-96 max-w-[90vw] justify-center gap-2 py-2">
                     @foreach ($items as $i)
                         @php($itemId = "{$component->id}item{$i}")
                         <a

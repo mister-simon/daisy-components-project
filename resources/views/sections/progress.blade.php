@@ -1,5 +1,4 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
-<h1>Progress</h1>
 
 <h2>Styles</h2>
 

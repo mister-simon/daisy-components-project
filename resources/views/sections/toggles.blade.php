@@ -1,5 +1,4 @@
 @php($types = collect(['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error']))
-<h1>Toggles</h1>
 
 <h2>Basic toggles</h2>
 
@@ -38,7 +37,7 @@
 
 <h2>Colours</h2>
 
-<div class="not-prose grid max-w-max grid-flow-col grid-rows-2 gap-2">
+<div class="not-prose grid max-w-max grid-flow-col grid-rows-4 gap-2 md:grid-rows-2">
     <x-toggle lg />
     <x-toggle lg checked />
 

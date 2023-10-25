@@ -1,5 +1,4 @@
 @php($types = collect(['info', 'success', 'warning', 'error']))
-<h1>Alerts</h1>
 
 <div class="space-y-2">
     <x-alert>This is a basic alert</x-alert>
