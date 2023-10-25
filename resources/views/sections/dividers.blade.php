@@ -1,6 +1,6 @@
 <h2>Basic divider</h2>
 
-<x-card bordered class="not-prose">
+<x-card bordered class="not-prose max-w-prose">
     <p>Note that this divider does not contain any semantic information.</p>
     <x-divider />
     <p>Meaning that it is considered mostly presentational.</p>
@@ -10,7 +10,7 @@
 
 <h2>Horizontal divider</h2>
 
-<x-card bordered class="not-prose">
+<x-card bordered class="not-prose max-w-prose">
     <div class="flex flex-row justify-evenly">
         <div>Hello</div>
         <x-divider horizontal />
@@ -20,7 +20,7 @@
 
 <h2>Dividers with text</h2>
 
-<x-card bordered class="not-prose text-center">
+<x-card bordered class="not-prose max-w-prose text-center">
     <div class="rounded-box bg-base-200 p-2">Divide</div>
     <x-divider>and</x-divider>
     <div class="flex h-40 flex-row items-center justify-evenly">
@@ -32,11 +32,11 @@
 
 <h2>Custom divider</h2>
 
-<x-card bordered class="not-prose bg-neutral text-neutral-content">
+<x-card bordered class="not-prose max-w-prose bg-neutral text-neutral-content">
     <p>You can restyle the text within or pass additional attributes as you would with any other component.</p>
     <x-divider class="text-2xl text-primary before:bg-primary/50 after:bg-primary/50">Neat</x-divider>
     <p>
         To restyle the lines of the divider you'll need to use pseudo-selector variant classes.
-        <code>class="before:bg-primary/50 after:bg-primary/50"</code>
     </p>
+    <p><code>class="before:bg-primary/50 after:bg-primary/50"</code></p>
 </x-card>
