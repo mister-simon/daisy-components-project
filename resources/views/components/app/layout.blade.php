@@ -26,7 +26,8 @@
                 <div class="flex-none">
                     <label
                         for="sidebar"
-                        class="btn btn-square btn-ghost drawer-button">
+                        class="btn btn-square btn-ghost drawer-button"
+                        role="button">
                         <x-app.icon-menu />
                         <div class="sr-only">Open Navigation</div>
                     </label>
@@ -49,17 +50,20 @@
 
         <x-slot:toggle
             x-data
-            x-on:keyup.enter="$store.navOpen = !$store.navOpen"
+            x-on:keyup.enter="$el.click()"
             x-model="$store.navOpen"
             aria-controls="sidebar-drawer"
             x-bind:aria-expanded="$store.navOpen">
         </x-slot:toggle>
 
-        <x-slot:drawer id="sidebar-drawer">
+        <x-slot:drawer
+            id="sidebar-drawer"
+            class="h-full"
+            aria-label="Navigation Menu">
             <div
-                class="min-h-full w-64 max-w-[90vw] overflow-auto bg-base-100 text-base-content"
+                class="h-full w-64 max-w-[90vw] overflow-auto bg-base-100 text-base-content"
                 x-data
-                x-trap.noscroll="$store.navOpen"
+                x-trap.noscroll.inert="$store.navOpen"
                 @keyup.escape.window="$store.navOpen = false">
                 <div x-show="$store.navOpen" x-transition.opacity.duration.300ms>
                     <x-app.nav />
