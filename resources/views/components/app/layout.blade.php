@@ -48,16 +48,16 @@
 
         <x-slot:toggle
             x-data
-            x-effect="document
-                .querySelector('body')
-                .classList
-                .toggle('overflow-hidden', $store.navOpen)"
+            x-on:keyup.enter="$store.navOpen = !$store.navOpen"
             x-model="$store.navOpen">
         </x-slot:toggle>
 
         <x-slot:drawer>
             <div
-                class="min-h-full w-64 max-w-[90vw] overflow-auto bg-base-100 text-base-content">
+                class="min-h-full w-64 max-w-[90vw] overflow-auto bg-base-100 text-base-content"
+                x-data
+                x-trap.noscroll="$store.navOpen"
+                @keyup.escape.window="$store.navOpen = false">
                 <x-app.nav />
             </div>
         </x-slot:drawer>
