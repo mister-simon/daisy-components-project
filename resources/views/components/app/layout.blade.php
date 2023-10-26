@@ -57,6 +57,7 @@
                 class="min-h-full w-64 max-w-[90vw] overflow-auto bg-base-100 text-base-content"
                 x-data
                 x-trap.noscroll="$store.navOpen"
+                @focusin="$store.navOpen = true"
                 @keyup.escape.window="$store.navOpen = false">
                 <x-app.nav />
             </div>
