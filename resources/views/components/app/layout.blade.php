@@ -28,6 +28,7 @@
                         for="sidebar"
                         class="btn btn-square btn-ghost drawer-button">
                         <x-app.icon-menu />
+                        <div class="sr-only">Open Navigation</div>
                     </label>
                 </div>
                 @isset($subtitle)
@@ -49,17 +50,20 @@
         <x-slot:toggle
             x-data
             x-on:keyup.enter="$store.navOpen = !$store.navOpen"
-            x-model="$store.navOpen">
+            x-model="$store.navOpen"
+            aria-controls="sidebar-drawer"
+            x-bind:aria-expanded="$store.navOpen">
         </x-slot:toggle>
 
-        <x-slot:drawer>
+        <x-slot:drawer id="sidebar-drawer">
             <div
                 class="min-h-full w-64 max-w-[90vw] overflow-auto bg-base-100 text-base-content"
                 x-data
                 x-trap.noscroll="$store.navOpen"
-                @focusin="$store.navOpen = true"
                 @keyup.escape.window="$store.navOpen = false">
-                <x-app.nav />
+                <div x-show="$store.navOpen" x-transition.opacity.duration.300ms>
+                    <x-app.nav />
+                </div>
             </div>
         </x-slot:drawer>
     </x-drawer>

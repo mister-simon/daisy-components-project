@@ -13,10 +13,12 @@
     </li>
     <x-app.nav-divider />
     @foreach ($sections as $section)
+        @php($active = request()->is($section))
         <li>
             <a
                 href="{{ url($section) }}"
-                @class(['active' => request()->is($section)])>
+                {{ $active ? 'aria-current=page' : '' }}
+                @class(['active' => $active])>
                 {{ $section }}
             </a>
         </li>
