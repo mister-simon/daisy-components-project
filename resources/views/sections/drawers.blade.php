@@ -48,13 +48,14 @@
             <p>Note: This doesn't seem to play well with the end drawer option.</p>
         </div>
 
-        <x-slot:drawer class="absolute h-full">
+        <x-slot:drawer class="absolute z-40 h-full">
             <div
                 class="h-full w-[65ch] max-w-[90vw] overflow-auto bg-base-100 p-4">
                 <x-button tag="label" for="relativeExample">Close</x-button>
                 <p>This is the drawer content, fixed to the right side.</p>
                 <p>Relative parent, absolute drawer wrapper will full height.</p>
                 <p>Full height drawer inner, with overflow-auto to deal with scrolling.</p>
+                <p>By default the side drawer recieves z-50. This drawer has z-40 so that it doesn't render over fixed drawers.</p>
             </div>
         </x-slot:drawer>
     </x-drawer>
