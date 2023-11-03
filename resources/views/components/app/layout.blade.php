@@ -17,7 +17,7 @@
                 x-intersect:enter="stuck = false"
                 x-intersect:leave.full="stuck = true">
             </span>
-            <div
+            <header
                 class="navbar sticky inset-x-0 top-0 z-50 mb-4 max-w-[100vw] rounded-b-lg bg-base-100/80 shadow backdrop-blur transition-[shadow,transform]"
                 :class="{
                     'min-h-0 p-0 origin-top': stuck,
@@ -42,7 +42,7 @@
                         daisyUI components
                     </a>
                 </div>
-            </div>
+            </header>
             <main class="prose max-w-[initial] px-4 pb-12">
                 {{ $slot }}
             </main>
@@ -71,6 +71,23 @@
             </div>
         </x-slot:drawer>
     </x-drawer>
+
+    <footer class="container footer rounded-t-box mx-auto mt-auto items-center border border-b-0 p-4 shadow">
+        <aside class="grid-flow-col items-center">
+            <p>© {{ date('Y') }} - All rights reserved</p>
+        </aside>
+        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <x-a
+                outline
+                href="https://github.com/mister-simon/daisy-components-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-max">
+                View this project on Github
+                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="View on Github" width="50">
+            </x-a>
+        </nav>
+    </footer>
 </body>
 
 </html>

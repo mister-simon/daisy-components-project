@@ -7,7 +7,7 @@
 <x-app.layout
     title="Daisy Components - Home"
     subtitle="Home">
-    <ul class="not-prose menu rounded-box menu-lg bg-base-200">
+    <ul class="not-prose menu rounded-box menu-lg">
         @foreach ($sections as $section)
             <li><a href="{{ url($section) }}">{{ ucwords($section) }}</a></li>
         @endforeach
