@@ -81,10 +81,13 @@
                 outline
                 href="https://github.com/mister-simon/daisy-components-project"
                 target="_blank"
-                rel="noopener noreferrer"
-                class="h-max">
+                rel="noopener noreferrer">
                 View this project on Github
-                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="View on Github" width="50">
+                <img
+                    src="{{ asset('img/github-icon.png') }}"
+                    alt=""
+                    width="35"
+                    class="overflow-hidden rounded-full">
             </x-a>
         </nav>
     </footer>
