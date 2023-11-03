@@ -43,9 +43,9 @@
                     </a>
                 </div>
             </div>
-            <section class="prose max-w-[initial] px-4 pb-12">
+            <main class="prose max-w-[initial] px-4 pb-12">
                 {{ $slot }}
-            </section>
+            </main>
         </div>
 
         <x-slot:toggle
