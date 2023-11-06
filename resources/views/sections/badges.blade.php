@@ -49,10 +49,12 @@
         <x-badge neutral>+99</x-badge>
     </x-button>
 
-    <div class="indicator">
-        <x-badge neutral class="indicator-item motion-safe:animate-pulse">New</x-badge>
+    <x-indicator>
+        <x-slot:indicator>
+            <x-badge neutral class="block motion-safe:animate-bounce">New</x-badge>
+        </x-slot:indicator>
         <x-button>Notifications</x-button>
-    </div>
+    </x-indicator>
 </div>
 
 <h2 class="flex items-center gap-2">Badges in text <x-badge lg outline>Wow</x-badge></h2>
