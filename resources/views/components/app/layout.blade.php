@@ -72,7 +72,7 @@
         </x-slot:drawer>
     </x-drawer>
 
-    <footer class="container footer rounded-t-box mx-auto mt-auto items-center border border-b-0 p-4 shadow">
+    <x-footer class="container rounded-t-box mx-auto mt-auto items-center border border-b-0 p-4 shadow">
         <aside class="grid-flow-col items-center">
             <p>© {{ date('Y') }} - All rights reserved</p>
         </aside>
@@ -90,7 +90,7 @@
                     class="overflow-hidden rounded-full">
             </x-a>
         </nav>
-    </footer>
+    </x-footer>
 </body>
 
 </html>
