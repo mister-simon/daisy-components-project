@@ -21,6 +21,7 @@
 
         <x-slot:toggle
             x-data
+            autocomplete="off"
             x-on:keyup.enter="$el.click()"
             x-model="$store.navOpen"
             aria-controls="sidebar-drawer"

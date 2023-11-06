@@ -70,7 +70,8 @@
             x-model="open"
             x-on:keyup.escape.window="open = false"
             x-bind:aria-expanded="open"
-            aria-controls="sidebar-improvedExample">
+            aria-controls="sidebar-improvedExample"
+            autocomplete="off">
         </x-slot:toggle>
 
         <div class="p-4">
@@ -83,6 +84,7 @@
             <p>This improved version has better accessibility + usability features.</p>
             <p>For example:</p>
             <ul>
+                <li>Use <code>autocomplete="off"</code> to prevent browser from rechecking hidden open state checkbox during history navigation (i.e. navigation drawer remains closed when user presses the back button in browser).</li>
                 <li>Added dialog role to drawer dialog.</li>
                 <li>Checkbox is bound to alpine state.</li>
                 <li>Pressing escape closes the sidebar.</li>
