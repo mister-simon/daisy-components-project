@@ -259,7 +259,7 @@
 </form>
 
 {{-- You can also preload the events from Laravel by dispatching events to the window after alpine's main init event. --}}
-@php($messages = [['message' => 'Hello from laravel', 'type' => 'alert-info', 'timeout' => 8000], ['message' => 'Woohoo!', 'type' => 'alert-success', 'timeout' => 10000]])
+@php($messages = [['message' => 'Hello from laravel', 'type' => 'alert-info', 'timeout' => 1000], ['message' => 'Woohoo!', 'type' => 'alert-success', 'timeout' => 2000]])
 
 @foreach ($messages as $message)
     <template x-init="$dispatch('add-toast', {
@@ -268,3 +268,23 @@
         timeout: {{ $message['timeout'] }},
     })"></template>
 @endforeach
+
+{{-- An alternate method of preloading messages to avoid dom pollution: --}}
+<script>
+    function addToast(toast) {
+        window.dispatchEvent(
+            new CustomEvent('add-toast', {
+                'detail': toast
+            })
+        )
+    }
+
+    window.addEventListener(
+        'alpine:initialized',
+        () => {
+            @foreach ($messages as $message)
+                addToast(@json($message));
+            @endforeach
+        }
+    );
+</script>
