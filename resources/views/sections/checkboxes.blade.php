@@ -64,6 +64,6 @@
     <x-checkbox lg error />
     <x-checkbox lg error checked />
 
-    <x-checkbox lg :type="$type = $types->random()" />
-    <x-checkbox lg :type="$type" checked />
+    <x-checkbox lg :color="$type = $types->random()" />
+    <x-checkbox lg :color="$type" checked />
 </div>

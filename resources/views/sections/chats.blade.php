@@ -70,7 +70,7 @@
     <x-chat success end>Success</x-chat>
     <x-chat warning end>Warning</x-chat>
     <x-chat error end>Error</x-chat>
-    <x-chat :type="$types->random()">Set via :type</x-chat>
+    <x-chat :color="$types->random()">Set via :color</x-chat>
 </div>
 
 <h2>Bubble contents + additional styling</h2>

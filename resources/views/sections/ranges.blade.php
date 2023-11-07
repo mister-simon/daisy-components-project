@@ -84,8 +84,8 @@
     <x-range error />
 </div>
 
-<h2>Set colour via :type attribute</h2>
-<x-range :type="$types->random()" />
+<h2>Set colour via :color attribute</h2>
+<x-range :color="$types->random()" />
 
 <h2>Colours + extra custom measure styling</h2>
 

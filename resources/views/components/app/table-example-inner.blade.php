@@ -23,7 +23,7 @@
             <td>
                 <div class="flex items-center gap-2">
                     {{ $colour }}
-                    <x-badge :type="$colour" xs />
+                    <x-badge :color="$colour" xs />
                 </div>
             </td>
         </tr>

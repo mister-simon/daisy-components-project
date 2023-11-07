@@ -61,5 +61,5 @@
     <x-file-input error />
 </div>
 
-<h2>Set colour via :type attribute</h2>
-<x-file-input :type="$types->random()" />
+<h2>Set colour via :color attribute</h2>
+<x-file-input :color="$types->random()" />

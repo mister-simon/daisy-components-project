@@ -62,6 +62,6 @@
     <x-toggle lg error />
     <x-toggle lg error checked />
 
-    <x-toggle lg :type="$type = $types->random()" />
-    <x-toggle lg :type="$type" checked />
+    <x-toggle lg :color="$type = $types->random()" />
+    <x-toggle lg :color="$type" checked />
 </div>

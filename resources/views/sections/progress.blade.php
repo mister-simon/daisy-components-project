@@ -12,7 +12,7 @@
     <x-progress class="max-w-sm" max="100" value="70" success />
     <x-progress class="max-w-sm" max="100" value="80" warning />
     <x-progress class="max-w-sm" max="100" value="90" error />
-    <x-progress class="max-w-sm" max="100" value="100" :type="$types->random()" />
+    <x-progress class="max-w-sm" max="100" value="100" :color="$types->random()" />
 </div>
 
 <h2>Indeterminate value</h2>

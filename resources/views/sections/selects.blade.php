@@ -61,7 +61,7 @@
     <x-select :options="$types" lg success :value="$types->search('success')" />
     <x-select :options="$types" lg warning :value="$types->search('warning')" />
     <x-select :options="$types" lg error :value="$types->search('error')" />
-    <x-select :options="$types" lg :type="$type = $types->random()" :value="$types->search($type)" />
+    <x-select :options="$types" lg :color="$type = $types->random()" :value="$types->search($type)" />
 </div>
 
 <h2>Select with slot</h2>

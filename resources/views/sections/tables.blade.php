@@ -23,7 +23,7 @@
                     <td>
                         <div class="flex items-center gap-2">
                             accent
-                            <x-badge type="accent" xs />
+                            <x-badge color="accent" xs />
                         </div>
                     </td>
                 </tr>

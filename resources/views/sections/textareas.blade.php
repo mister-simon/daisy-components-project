@@ -60,5 +60,5 @@
     <x-textarea success value="success" />
     <x-textarea warning value="warning" />
     <x-textarea error value="error" />
-    <x-textarea :type="$types->random()" value="Set via :type" />
+    <x-textarea :color="$types->random()" value="Set via :color" />
 </div>

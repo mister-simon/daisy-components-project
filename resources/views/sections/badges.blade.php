@@ -14,7 +14,7 @@
     <x-badge warning>Warning</x-badge>
     <x-badge error>Error</x-badge>
 
-    <x-badge :type="$types->random()">Set via :type</x-badge>
+    <x-badge :color="$types->random()">Set via :color</x-badge>
 </div>
 
 <h2>Outline badges</h2>

@@ -65,6 +65,6 @@
     <x-radio lg name="raderroro" error />
     <x-radio lg name="raderroro" error checked />
 
-    <x-radio lg name="radrandomiseo" :type="$type = $types->random()" />
-    <x-radio lg name="radrandomiseo" :type="$type" checked />
+    <x-radio lg name="radrandomiseo" :color="$type = $types->random()" />
+    <x-radio lg name="radrandomiseo" :color="$type" checked />
 </div>

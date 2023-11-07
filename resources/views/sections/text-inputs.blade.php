@@ -60,5 +60,5 @@
     <x-input success value="success" />
     <x-input warning value="warning" />
     <x-input error value="error" />
-    <x-input :type="$types->random()" value="Set via :type" />
+    <x-input :color="$types->random()" value="Set via :color" />
 </div>

@@ -73,7 +73,7 @@
         <x-button error>Error</x-button>
     </x-tooltip>
 
-    <x-tooltip :type="$type = $types->random()" tip="Set via :type attribute">
-        <x-button :type="$type">Randomised colour</x-button>
+    <x-tooltip :color="$type = $types->random()" tip="Set via :color attribute">
+        <x-button :color="$type">Randomised colour</x-button>
     </x-tooltip>
 </div>
