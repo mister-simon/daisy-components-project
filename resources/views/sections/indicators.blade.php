@@ -18,7 +18,7 @@
 <h2>Indicator positions</h2>
 
 <div class="mr-auto grid w-max grid-cols-3 grid-rows-3 gap-4">
-    <x-indicator top left>
+    <x-indicator top start>
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
@@ -26,11 +26,11 @@
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
-    <x-indicator top right>
+    <x-indicator top end>
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
-    <x-indicator middle left>
+    <x-indicator middle start>
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
@@ -38,11 +38,11 @@
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
-    <x-indicator middle right>
+    <x-indicator middle end>
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
-    <x-indicator bottom left>
+    <x-indicator bottom start>
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
@@ -50,7 +50,7 @@
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
-    <x-indicator bottom right>
+    <x-indicator bottom end>
         <x-slot:indicator class="badge badge-secondary"></x-slot:indicator>
         <div class="grid h-10 w-10 place-items-center bg-base-300 text-center"></div>
     </x-indicator>
