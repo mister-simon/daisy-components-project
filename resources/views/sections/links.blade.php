@@ -2,12 +2,6 @@
 
 <p>If you're not using tailwind typography for your text content you may use this component to readd some sane link styling.</p>
 
-<h2>Basic link</h2>
-
-<div class="not-prose">
-    <x-link href="#">Example Link</x-link>
-</div>
-
 <h2>Link colours</h2>
 
 <div class="not-prose">
