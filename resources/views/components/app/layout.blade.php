@@ -12,7 +12,7 @@
 <body class="relative flex min-h-screen flex-col">
     <x-drawer id="sidebar">
         <div class="container mx-auto" x-data="{ headerStuck: false }">
-            <x-app.header />
+            <x-app.header :subtitle="$subtitle ?? null" />
 
             <main class="prose max-w-[initial] px-4 pb-12">
                 {{ $slot }}
